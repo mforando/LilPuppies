@@ -1,0 +1,262 @@
+{
+ "A": {
+  "breed": "hound/afghan",
+  "photo": "n02088094_7146.jpg",
+  "flip": true
+ },
+ "B": {
+  "breed": "hound/basset",
+  "photo": "n02088238_6708.jpg",
+  "flip": false
+ },
+ "C": {
+  "breed": "chihuahua",
+  "photo": "black_chihuahua.jpg",
+  "flip": false
+ },
+ "D": {
+  "breed": "dachshund",
+  "photo": "dachshund-1018409_640.jpg",
+  "flip": false
+ },
+ "E": {
+  "breed": "eskimo",
+  "photo": "n02109961_4157.jpg",
+  "flip": false
+ },
+ "F": {
+  "breed": "bulldog/french",
+  "photo": "n02108915_2807.jpg",
+  "flip": true
+ },
+ "G": {
+  "breed": "dane/great",
+  "photo": "n02109047_12569.jpg",
+  "flip": true
+ },
+ "H": {
+  "breed": "husky",
+  "photo": "n02110185_7210.jpg",
+  "flip": true
+ },
+ "I": {
+  "breed": "wolfhound/irish",
+  "photo": "n02090721_452.jpg",
+  "flip": false
+ },
+ "J": {
+  "breed": "spaniel/japanese",
+  "photo": "n02085782_4574.jpg",
+  "flip": true
+ },
+ "K": {
+  "breed": "kelpie",
+  "photo": "n02105412_3075.jpg",
+  "flip": true
+ },
+ "L": {
+  "breed": "leonberg",
+  "photo": "n02111129_2617.jpg",
+  "flip": false
+ },
+ "M": {
+  "breed": "malamute",
+  "photo": "n02110063_12656.jpg",
+  "flip": true
+ },
+ "N": {
+  "breed": "newfoundland",
+  "photo": "n02111277_399.jpg",
+  "flip": true
+ },
+ "O": {
+  "breed": "otterhound",
+  "photo": "n02091635_2482.jpg",
+  "flip": true
+ },
+ "P": {
+  "breed": "papillon",
+  "photo": "n02086910_9579.jpg",
+  "flip": true
+ },
+ "Q": {
+  "breed": "beagle",
+  "photo": "n02088364_10206.jpg",
+  "flip": false
+ },
+ "R": {
+  "breed": "ridgeback/rhodesian",
+  "photo": "n02087394_2319.jpg",
+  "flip": true
+ },
+ "S": {
+  "breed": "saluki",
+  "photo": "n02091831_3108.jpg",
+  "flip": true
+ },
+ "T": {
+  "breed": "mastiff/tibetan",
+  "photo": "n02108551_2111.jpg",
+  "flip": false
+ },
+ "U": {
+  "breed": "collie/border",
+  "photo": "n02106166_615.jpg",
+  "flip": true
+ },
+ "V": {
+  "breed": "vizsla",
+  "photo": "n02100583_12308.jpg",
+  "flip": true
+ },
+ "W": {
+  "breed": "weimaraner",
+  "photo": "n02092339_748.jpg",
+  "flip": true
+ },
+ "X": {
+  "breed": "mexicanhairless",
+  "photo": "n02113978_451.jpg",
+  "flip": false
+ },
+ "Y": {
+  "breed": "terrier/yorkshire",
+  "photo": "n02094433_3766.jpg",
+  "flip": false
+ },
+ "Z": {
+  "breed": "deerhound/scottish",
+  "photo": "n02092002_2981.jpg",
+  "flip": true
+ },
+ "a": {
+  "breed": "akita",
+  "photo": "japaneseakita.jpg",
+  "flip": false
+ },
+ "b": {
+  "breed": "boxer",
+  "photo": "n02108089_5977.jpg",
+  "flip": true
+ },
+ "c": {
+  "breed": "spaniel/cocker",
+  "photo": "n02102318_12053.jpg",
+  "flip": false
+ },
+ "d": {
+  "breed": "doberman",
+  "photo": "n02107142_8399.jpg",
+  "flip": false
+ },
+ "e": {
+  "breed": "springer/english",
+  "photo": "n02102040_5145.jpg",
+  "flip": true
+ },
+ "f": {
+  "breed": "terrier/fox",
+  "photo": "n02095314_2205.jpg",
+  "flip": true
+ },
+ "g": {
+  "breed": "german/shepherd",
+  "photo": "n02106662_21348.jpg",
+  "flip": true
+ },
+ "h": {
+  "breed": "hound/blood",
+  "photo": "n02088466_8950.jpg",
+  "flip": true
+ },
+ "i": {
+  "breed": "hound/ibizan",
+  "photo": "n02091244_596.jpg",
+  "flip": false
+ },
+ "j": {
+  "breed": "terrier/russell",
+  "photo": "jack-koda-1.jpg",
+  "flip": false
+ },
+ "k": {
+  "breed": "kuvasz",
+  "photo": "n02104029_4800.jpg",
+  "flip": false
+ },
+ "l": {
+  "breed": "lhasa",
+  "photo": "n02098413_7571.jpg",
+  "flip": true
+ },
+ "m": {
+  "breed": "pinscher/miniature",
+  "photo": "n02107312_5599.jpg",
+  "flip": false
+ },
+ "n": {
+  "breed": "elkhound/norwegian",
+  "photo": "n02091467_4906.jpg",
+  "flip": false
+ },
+ "o": {
+  "breed": "sheepdog/english",
+  "photo": "n02105641_12297.jpg",
+  "flip": true
+ },
+ "p": {
+  "breed": "poodle/standard",
+  "photo": "n02113799_7438.jpg",
+  "flip": true
+ },
+ "q": {
+  "breed": "borzoi",
+  "photo": "n02090622_8236.jpg",
+  "flip": false
+ },
+ "r": {
+  "breed": "redbone",
+  "photo": "n02090379_3372.jpg",
+  "flip": false
+ },
+ "s": {
+  "breed": "terrier/scottish",
+  "photo": "n02097298_825.jpg",
+  "flip": true
+ },
+ "t": {
+  "breed": "terrier/toy",
+  "photo": "n02087046_1577.jpg",
+  "flip": false
+ },
+ "u": {
+  "breed": "samoyed",
+  "photo": "n02111889_1374.jpg",
+  "flip": true
+ },
+ "v": {
+  "breed": "pembroke",
+  "photo": "n02113023_4269.jpg",
+  "flip": true
+ },
+ "w": {
+  "breed": "whippet",
+  "photo": "n02091134_732.jpg",
+  "flip": true
+ },
+ "x": {
+  "breed": "basenji",
+  "photo": "n02110806_402.jpg",
+  "flip": true
+ },
+ "y": {
+  "breed": "airedale",
+  "photo": "n02096051_3538.jpg",
+  "flip": false
+ },
+ "z": {
+  "breed": "stbernard",
+  "photo": "n02109525_10297.jpg",
+  "flip": false
+ }
+}

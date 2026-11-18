@@ -1,0 +1,3 @@
+# Downloaded photos and intermediate masks (rebuilt by build/fetch.py and build/segment.py)
+.cache/
+__pycache__/
