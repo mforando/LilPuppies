@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LilPuppies</title>
-<link rel="stylesheet" href="weedogs.css">
+<link rel="stylesheet" href="lilpuppies.css">
 <style>
   :root { --bg: #faf8f4; --ink: #1d1b18; --ink-2: #5d5850; --line: #e3ded4; --accent: #b4552d; }
   @media (prefers-color-scheme: dark) { :root { --bg: #17161a; --ink: #eeebe5; --ink-2: #a39d93; --line: #34313a; --accent: #e08a5f; } }
@@ -27,99 +27,339 @@
   .grid small { color: var(--ink-2); font-size: 11.5px; line-height: 1.3; }
   .try { width: 100%; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--ink); }
   .tryout { font-size: 48px; line-height: 1.1; min-height: 1.2em; overflow-wrap: anywhere; margin-top: 10px; }
+  .credit { font-size: 14px; color: var(--ink-2); margin-top: -0.4em; }
+  .viz { --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --other: color-mix(in srgb, var(--ink) 28%, transparent); }
+  @media (prefers-color-scheme: dark) { .viz { --s1: #3987e5; --s2: #d95926; --s3: #199e70; } }
+  .viz h3 { font-size: 1rem; margin: 2.2em 0 .2em; }
+  .viz .sub { margin: 0 0 .8em; font-size: 14.5px; }
+  .ubar { display: grid; grid-template-columns: 9em 1fr; align-items: end; gap: 10px; padding: 3px 0; }
+  .ulab { font-size: 14px; text-align: right; padding-bottom: 5px; }
+  .ulab span { color: var(--ink-2); font-variant-numeric: tabular-nums; margin-left: .25em; }
+  .umarks { font-size: min(34px, 5.4vw); line-height: 1; border-left: 1px solid var(--line); padding-left: 4px; }
+  .umarks span { cursor: default; }
+  .umarks span:hover { color: var(--accent); }
+  @media (max-width: 560px) { .ubar { grid-template-columns: 1fr; gap: 0; } .ulab { text-align: left; padding: 6px 0 0; } .umarks { font-size: 5.6vw; } }
+  .vbtns { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 10px; }
+  .vbtns button { font: inherit; font-size: 14px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+  .vbtns button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; margin: 0 0 6px; padding: 0; list-style: none; }
+  .legend li { display: flex; align-items: center; gap: 6px; }
+  .legend .lilpuppies { font-size: 22px; line-height: 1; }
+  .viz svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .viz svg text.dog { font-family: 'LilPuppies'; paint-order: stroke; stroke: var(--bg); stroke-width: 2px; stroke-linejoin: round; cursor: default; }
+  .viz svg .axis text { fill: var(--ink-2); font-size: 13px; }
+  .viz svg .axis line, .viz svg .axis path { stroke: var(--line); }
+  .viz svg .grid line { stroke: var(--line); stroke-dasharray: 2 3; }
+  .viz svg .note { fill: var(--ink-2); font-size: 12.5px; }
+  .viz svg .clabel { fill: var(--ink); font-size: 14px; font-weight: 600; }
+  .viz svg .clabel tspan { fill: var(--ink-2); font-weight: 400; }
+  .viz details { margin-top: 10px; font-size: 14px; }
+  .viz details > div, .viz table { display: block; overflow-x: auto; }
+  .viz table { border-collapse: collapse; margin-top: 8px; font-size: 13.5px; }
+  .viz th, .viz td { text-align: left; padding: 3px 14px 3px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .viz td:nth-child(n+4), .viz th:nth-child(n+4) { text-align: right; font-variant-numeric: tabular-nums; }
+  .viz td .lilpuppies { font-size: 20px; }
+  .tip { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 10; background: var(--ink); color: var(--bg); font-size: 13px; line-height: 1.35; padding: 5px 8px; border-radius: 5px; opacity: 0; transition: opacity .1s; max-width: 240px; }
   footer { margin-top: 3em; border-top: 1px solid var(--line); padding-top: 1em; font-size: 13.5px; color: var(--ink-2); }
 </style>
 </head>
 <body>
 <main>
   <h1>LilPuppies</h1>
-  <p>A font of dog silhouettes for unit charts, in the spirit of ProPublica&rsquo;s
-    <a href="https://github.com/propublica/weepeople">WeePeople</a>. Each of the 52 letters is a different breed,
+  <p class="credit">Inspired by ProPublica&rsquo;s <a href="https://github.com/propublica/weepeople">WeePeople</a> font
+    (<a href="https://github.com/propublica/weepeople">github.com/propublica/weepeople</a>).</p>
+  <p>A font of dog silhouettes for unit charts, following WeePeople&rsquo;s idea of one figure per letter. Each of the 52 letters is a different breed,
     traced from a photo in the <a href="https://dog.ceo/dog-api/">Dog CEO API</a>. Where a breed&rsquo;s name allows it,
     the letter is its initial: <b>B</b> is a basset hound.</p>
-  <div class="hero weedogs" aria-label="A row of dog silhouettes">ABCDEFGHIJKL</div>
+  <div class="hero lilpuppies" aria-label="A row of dog silhouettes">ABCDEFGHIJKL</div>
 
   <h2>In a chart</h2>
   <p>One dog per unit; color some of them. The letters cycle through every breed.</p>
-  <div class="chart weedogs" role="img" aria-label="100 dog silhouettes, 25 of them highlighted"><span class="hi">ABCDEFGHIJKLMNOPQRSTUVWXY</span>ZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv</div>
+  <div class="chart lilpuppies" role="img" aria-label="100 dog silhouettes, 25 of them highlighted"><span class="hi">ABCDEFGHIJKLMNOPQRSTUVWXY</span>ZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv</div>
 
   <h2>Try it</h2>
   <input class="try" id="try" value="Woof" aria-label="Type letters to see their dogs">
-  <div class="tryout weedogs" id="out" aria-hidden="true">Woof</div>
+  <div class="tryout lilpuppies" id="out" aria-hidden="true">Woof</div>
 
   <h2>Uppercase</h2>
   <ul class="grid">
-      <li><span class="weedogs g" aria-hidden="true">A</span><b>A</b><small>Afghan Hound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">B</span><b>B</b><small>Basset Hound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">C</span><b>C</b><small>Chihuahua</small></li>
-      <li><span class="weedogs g" aria-hidden="true">D</span><b>D</b><small>Dachshund</small></li>
-      <li><span class="weedogs g" aria-hidden="true">E</span><b>E</b><small>American Eskimo Dog</small></li>
-      <li><span class="weedogs g" aria-hidden="true">F</span><b>F</b><small>French Bulldog</small></li>
-      <li><span class="weedogs g" aria-hidden="true">G</span><b>G</b><small>Great Dane</small></li>
-      <li><span class="weedogs g" aria-hidden="true">H</span><b>H</b><small>Siberian Husky</small></li>
-      <li><span class="weedogs g" aria-hidden="true">I</span><b>I</b><small>Irish Wolfhound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">J</span><b>J</b><small>Japanese Chin</small></li>
-      <li><span class="weedogs g" aria-hidden="true">K</span><b>K</b><small>Kelpie</small></li>
-      <li><span class="weedogs g" aria-hidden="true">L</span><b>L</b><small>Leonberger</small></li>
-      <li><span class="weedogs g" aria-hidden="true">M</span><b>M</b><small>Alaskan Malamute</small></li>
-      <li><span class="weedogs g" aria-hidden="true">N</span><b>N</b><small>Newfoundland</small></li>
-      <li><span class="weedogs g" aria-hidden="true">O</span><b>O</b><small>Otterhound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">P</span><b>P</b><small>Papillon</small></li>
-      <li><span class="weedogs g" aria-hidden="true">Q</span><b>Q</b><small>Beagle</small></li>
-      <li><span class="weedogs g" aria-hidden="true">R</span><b>R</b><small>Rhodesian Ridgeback</small></li>
-      <li><span class="weedogs g" aria-hidden="true">S</span><b>S</b><small>Saluki</small></li>
-      <li><span class="weedogs g" aria-hidden="true">T</span><b>T</b><small>Tibetan Mastiff</small></li>
-      <li><span class="weedogs g" aria-hidden="true">U</span><b>U</b><small>Border Collie</small></li>
-      <li><span class="weedogs g" aria-hidden="true">V</span><b>V</b><small>Vizsla</small></li>
-      <li><span class="weedogs g" aria-hidden="true">W</span><b>W</b><small>Weimaraner</small></li>
-      <li><span class="weedogs g" aria-hidden="true">X</span><b>X</b><small>Xoloitzcuintli</small></li>
-      <li><span class="weedogs g" aria-hidden="true">Y</span><b>Y</b><small>Yorkshire Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">Z</span><b>Z</b><small>Scottish Deerhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">A</span><b>A</b><small>Afghan Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">B</span><b>B</b><small>Basset Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">C</span><b>C</b><small>Chihuahua</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">D</span><b>D</b><small>Dachshund</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">E</span><b>E</b><small>American Eskimo Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">F</span><b>F</b><small>French Bulldog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">G</span><b>G</b><small>Great Dane</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">H</span><b>H</b><small>Siberian Husky</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">I</span><b>I</b><small>Irish Wolfhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">J</span><b>J</b><small>Japanese Chin</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">K</span><b>K</b><small>Kelpie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">L</span><b>L</b><small>Leonberger</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">M</span><b>M</b><small>Alaskan Malamute</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">N</span><b>N</b><small>Newfoundland</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">O</span><b>O</b><small>Otterhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">P</span><b>P</b><small>Papillon</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">Q</span><b>Q</b><small>Beagle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">R</span><b>R</b><small>Rhodesian Ridgeback</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">S</span><b>S</b><small>Saluki</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">T</span><b>T</b><small>Tibetan Mastiff</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">U</span><b>U</b><small>Border Collie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">V</span><b>V</b><small>Vizsla</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">W</span><b>W</b><small>Weimaraner</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">X</span><b>X</b><small>Xoloitzcuintli</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">Y</span><b>Y</b><small>Yorkshire Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">Z</span><b>Z</b><small>Scottish Deerhound</small></li>
   </ul>
   <h2>Lowercase</h2>
   <ul class="grid">
-      <li><span class="weedogs g" aria-hidden="true">a</span><b>a</b><small>Akita</small></li>
-      <li><span class="weedogs g" aria-hidden="true">b</span><b>b</b><small>Boxer</small></li>
-      <li><span class="weedogs g" aria-hidden="true">c</span><b>c</b><small>Cocker Spaniel</small></li>
-      <li><span class="weedogs g" aria-hidden="true">d</span><b>d</b><small>Doberman Pinscher</small></li>
-      <li><span class="weedogs g" aria-hidden="true">e</span><b>e</b><small>English Springer Spaniel</small></li>
-      <li><span class="weedogs g" aria-hidden="true">f</span><b>f</b><small>Fox Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">g</span><b>g</b><small>German Shepherd</small></li>
-      <li><span class="weedogs g" aria-hidden="true">h</span><b>h</b><small>Bloodhound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">i</span><b>i</b><small>Ibizan Hound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">j</span><b>j</b><small>Russell Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">k</span><b>k</b><small>Kuvasz</small></li>
-      <li><span class="weedogs g" aria-hidden="true">l</span><b>l</b><small>Lhasa Apso</small></li>
-      <li><span class="weedogs g" aria-hidden="true">m</span><b>m</b><small>Miniature Pinscher</small></li>
-      <li><span class="weedogs g" aria-hidden="true">n</span><b>n</b><small>Norwegian Elkhound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">o</span><b>o</b><small>Old English Sheepdog</small></li>
-      <li><span class="weedogs g" aria-hidden="true">p</span><b>p</b><small>Standard Poodle</small></li>
-      <li><span class="weedogs g" aria-hidden="true">q</span><b>q</b><small>Borzoi</small></li>
-      <li><span class="weedogs g" aria-hidden="true">r</span><b>r</b><small>Redbone Coonhound</small></li>
-      <li><span class="weedogs g" aria-hidden="true">s</span><b>s</b><small>Scottish Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">t</span><b>t</b><small>Toy Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">u</span><b>u</b><small>Samoyed</small></li>
-      <li><span class="weedogs g" aria-hidden="true">v</span><b>v</b><small>Pembroke Welsh Corgi</small></li>
-      <li><span class="weedogs g" aria-hidden="true">w</span><b>w</b><small>Whippet</small></li>
-      <li><span class="weedogs g" aria-hidden="true">x</span><b>x</b><small>Basenji</small></li>
-      <li><span class="weedogs g" aria-hidden="true">y</span><b>y</b><small>Airedale Terrier</small></li>
-      <li><span class="weedogs g" aria-hidden="true">z</span><b>z</b><small>St. Bernard</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">a</span><b>a</b><small>Akita</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">b</span><b>b</b><small>Boxer</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">c</span><b>c</b><small>Cocker Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">d</span><b>d</b><small>Doberman Pinscher</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">e</span><b>e</b><small>English Springer Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">f</span><b>f</b><small>Fox Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">g</span><b>g</b><small>German Shepherd</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">h</span><b>h</b><small>Bloodhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">i</span><b>i</b><small>Ibizan Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">j</span><b>j</b><small>Russell Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">k</span><b>k</b><small>Kuvasz</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">l</span><b>l</b><small>Lhasa Apso</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">m</span><b>m</b><small>Miniature Pinscher</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">n</span><b>n</b><small>Norwegian Elkhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">o</span><b>o</b><small>Old English Sheepdog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">p</span><b>p</b><small>Standard Poodle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">q</span><b>q</b><small>Borzoi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">r</span><b>r</b><small>Redbone Coonhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">s</span><b>s</b><small>Scottish Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">t</span><b>t</b><small>Toy Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">u</span><b>u</b><small>Samoyed</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">v</span><b>v</b><small>Pembroke Welsh Corgi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">w</span><b>w</b><small>Whippet</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">x</span><b>x</b><small>Basenji</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">y</span><b>y</b><small>Airedale Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true">z</span><b>z</b><small>St. Bernard</small></li>
   </ul>
 
   <h2>Use it</h2>
-  <pre>&lt;link rel="stylesheet" href="weedogs.css"&gt;
-&lt;span class="weedogs"&gt;BbDdGg&lt;/span&gt;</pre>
-  <p>The CSS embeds the font, so it is the only file you need. Or load <code>weedogs.woff2</code> /
-    <code>weedogs.woff</code> / <code>weedogs.ttf</code> with your own <code>@font-face</code>. Space is a gap the width of a
+  <pre>&lt;link rel="stylesheet" href="lilpuppies.css"&gt;
+&lt;span class="lilpuppies"&gt;BbDdGg&lt;/span&gt;</pre>
+  <p>The CSS embeds the font, so it is the only file you need. Or load <code>lilpuppies.woff2</code> /
+    <code>lilpuppies.woff</code> / <code>lilpuppies.ttf</code> with your own <code>@font-face</code>. Space is a gap the width of a
     dog. Only A&ndash;Z and a&ndash;z have dogs, the same characters as WeePeople.</p>
+
+  <section class="viz" aria-labelledby="viz-h">
+  <h2 id="viz-h">Example charts</h2>
+  <p>Every mark below is a LilPuppies character, sized and colored like any other text. The breed groups, weights
+    and lifespans are approximate typical values, used here only to show the font.</p>
+
+  <h3>Unit bar chart</h3>
+  <p class="sub">The 52 breeds in the font by AKC group. Each breed is drawn with its own letter.</p>
+  <div class="ubars" role="img" aria-label="Bar chart of the 52 breeds by AKC group: Hound 16, Working 12, Toy 6, Herding 5, Non-Sporting 5, Sporting 4, Terrier 4">
+    <div class="ubar"><div class="ulab">Hound <span>16</span></div><div class="umarks lilpuppies"><span data-tip="Afghan Hound">A</span><span data-tip="Basset Hound">B</span><span data-tip="Dachshund">D</span><span data-tip="Irish Wolfhound">I</span><span data-tip="Otterhound">O</span><span data-tip="Beagle">Q</span><span data-tip="Rhodesian Ridgeback">R</span><span data-tip="Saluki">S</span><span data-tip="Scottish Deerhound">Z</span><span data-tip="Bloodhound">h</span><span data-tip="Ibizan Hound">i</span><span data-tip="Norwegian Elkhound">n</span><span data-tip="Borzoi">q</span><span data-tip="Redbone Coonhound">r</span><span data-tip="Whippet">w</span><span data-tip="Basenji">x</span></div></div>
+    <div class="ubar"><div class="ulab">Working <span>12</span></div><div class="umarks lilpuppies"><span data-tip="Great Dane">G</span><span data-tip="Siberian Husky">H</span><span data-tip="Leonberger">L</span><span data-tip="Alaskan Malamute">M</span><span data-tip="Newfoundland">N</span><span data-tip="Tibetan Mastiff">T</span><span data-tip="Akita">a</span><span data-tip="Boxer">b</span><span data-tip="Doberman Pinscher">d</span><span data-tip="Kuvasz">k</span><span data-tip="Samoyed">u</span><span data-tip="St. Bernard">z</span></div></div>
+    <div class="ubar"><div class="ulab">Toy <span>6</span></div><div class="umarks lilpuppies"><span data-tip="Chihuahua">C</span><span data-tip="Japanese Chin">J</span><span data-tip="Papillon">P</span><span data-tip="Yorkshire Terrier">Y</span><span data-tip="Miniature Pinscher">m</span><span data-tip="Toy Terrier">t</span></div></div>
+    <div class="ubar"><div class="ulab">Herding <span>5</span></div><div class="umarks lilpuppies"><span data-tip="Kelpie">K</span><span data-tip="Border Collie">U</span><span data-tip="German Shepherd">g</span><span data-tip="Old English Sheepdog">o</span><span data-tip="Pembroke Welsh Corgi">v</span></div></div>
+    <div class="ubar"><div class="ulab">Non-Sporting <span>5</span></div><div class="umarks lilpuppies"><span data-tip="American Eskimo Dog">E</span><span data-tip="French Bulldog">F</span><span data-tip="Xoloitzcuintli">X</span><span data-tip="Lhasa Apso">l</span><span data-tip="Standard Poodle">p</span></div></div>
+    <div class="ubar"><div class="ulab">Sporting <span>4</span></div><div class="umarks lilpuppies"><span data-tip="Vizsla">V</span><span data-tip="Weimaraner">W</span><span data-tip="Cocker Spaniel">c</span><span data-tip="English Springer Spaniel">e</span></div></div>
+    <div class="ubar"><div class="ulab">Terrier <span>4</span></div><div class="umarks lilpuppies"><span data-tip="Fox Terrier">f</span><span data-tip="Russell Terrier">j</span><span data-tip="Scottish Terrier">s</span><span data-tip="Airedale Terrier">y</span></div></div>
+  </div>
+
+  <h3>100 dogs in a force layout</h3>
+  <p class="sub">An imaginary shelter&rsquo;s 100 dogs, first as one pack and then split by outcome.</p>
+  <div class="vbtns" role="group" aria-label="Layout">
+    <button type="button" aria-pressed="true" data-mode="pack">One pack</button>
+    <button type="button" aria-pressed="false" data-mode="split">By outcome</button>
+  </div>
+  <ul class="legend" id="force-legend"></ul>
+  <svg id="force" viewBox="0 0 960 400" role="img" aria-label="100 dog silhouettes: 58 adopted, 27 in foster care, 15 waiting"></svg>
+
+  <h3>Scatter plot</h3>
+  <p class="sub">Typical adult weight and lifespan for each breed. Three AKC groups are colored and the rest are gray.
+    Dogs that would overlap are nudged apart.</p>
+  <ul class="legend" id="scatter-legend"></ul>
+  <svg id="scatter" viewBox="0 0 960 540" role="img" aria-label="Scatter plot of weight against lifespan for 52 breeds: bigger breeds tend to live shorter lives"></svg>
+  <details>
+    <summary>Show the data as a table</summary>
+    <table>
+      <thead><tr><th>Letter</th><th>Breed</th><th>AKC group</th><th>Weight (kg)</th><th>Lifespan (yrs)</th></tr></thead>
+      <tbody>
+      <tr><td><span class="lilpuppies" aria-hidden="true">A</span> A</td><td>Afghan Hound</td><td>Hound</td><td>25</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">y</span> y</td><td>Airedale Terrier</td><td>Terrier</td><td>25</td><td>11.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">a</span> a</td><td>Akita</td><td>Working</td><td>45</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">M</span> M</td><td>Alaskan Malamute</td><td>Working</td><td>36</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">E</span> E</td><td>American Eskimo Dog</td><td>Non-Sporting</td><td>11</td><td>14</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">x</span> x</td><td>Basenji</td><td>Hound</td><td>10</td><td>14</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">B</span> B</td><td>Basset Hound</td><td>Hound</td><td>27</td><td>12</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">Q</span> Q</td><td>Beagle</td><td>Hound</td><td>10</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">h</span> h</td><td>Bloodhound</td><td>Hound</td><td>45</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">U</span> U</td><td>Border Collie</td><td>Herding</td><td>18</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">q</span> q</td><td>Borzoi</td><td>Hound</td><td>38</td><td>10.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">b</span> b</td><td>Boxer</td><td>Working</td><td>30</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">C</span> C</td><td>Chihuahua</td><td>Toy</td><td>2</td><td>16</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">c</span> c</td><td>Cocker Spaniel</td><td>Sporting</td><td>12</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">D</span> D</td><td>Dachshund</td><td>Hound</td><td>10</td><td>14</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">d</span> d</td><td>Doberman Pinscher</td><td>Working</td><td>38</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">e</span> e</td><td>English Springer Spaniel</td><td>Sporting</td><td>22</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">f</span> f</td><td>Fox Terrier</td><td>Terrier</td><td>8</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">F</span> F</td><td>French Bulldog</td><td>Non-Sporting</td><td>11</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">g</span> g</td><td>German Shepherd</td><td>Herding</td><td>32</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">G</span> G</td><td>Great Dane</td><td>Working</td><td>63</td><td>8.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">i</span> i</td><td>Ibizan Hound</td><td>Hound</td><td>22</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">I</span> I</td><td>Irish Wolfhound</td><td>Hound</td><td>60</td><td>7.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">J</span> J</td><td>Japanese Chin</td><td>Toy</td><td>3.5</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">K</span> K</td><td>Kelpie</td><td>Herding</td><td>17</td><td>12.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">k</span> k</td><td>Kuvasz</td><td>Working</td><td>45</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">L</span> L</td><td>Leonberger</td><td>Working</td><td>55</td><td>8</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">l</span> l</td><td>Lhasa Apso</td><td>Non-Sporting</td><td>6</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">m</span> m</td><td>Miniature Pinscher</td><td>Toy</td><td>4.5</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">N</span> N</td><td>Newfoundland</td><td>Working</td><td>60</td><td>9</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">n</span> n</td><td>Norwegian Elkhound</td><td>Hound</td><td>22</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">o</span> o</td><td>Old English Sheepdog</td><td>Herding</td><td>34</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">O</span> O</td><td>Otterhound</td><td>Hound</td><td>47</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">P</span> P</td><td>Papillon</td><td>Toy</td><td>4</td><td>15</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">v</span> v</td><td>Pembroke Welsh Corgi</td><td>Herding</td><td>12</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">r</span> r</td><td>Redbone Coonhound</td><td>Hound</td><td>29</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">R</span> R</td><td>Rhodesian Ridgeback</td><td>Hound</td><td>35</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">j</span> j</td><td>Russell Terrier</td><td>Terrier</td><td>6</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">S</span> S</td><td>Saluki</td><td>Hound</td><td>23</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">u</span> u</td><td>Samoyed</td><td>Working</td><td>25</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">Z</span> Z</td><td>Scottish Deerhound</td><td>Hound</td><td>41</td><td>9</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">s</span> s</td><td>Scottish Terrier</td><td>Terrier</td><td>9</td><td>12</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">H</span> H</td><td>Siberian Husky</td><td>Working</td><td>23</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">z</span> z</td><td>St. Bernard</td><td>Working</td><td>70</td><td>9</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">p</span> p</td><td>Standard Poodle</td><td>Non-Sporting</td><td>25</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">T</span> T</td><td>Tibetan Mastiff</td><td>Working</td><td>60</td><td>11</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">t</span> t</td><td>Toy Terrier</td><td>Toy</td><td>3.5</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">V</span> V</td><td>Vizsla</td><td>Sporting</td><td>23</td><td>13</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">W</span> W</td><td>Weimaraner</td><td>Sporting</td><td>32</td><td>12</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">w</span> w</td><td>Whippet</td><td>Hound</td><td>13</td><td>13.5</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">X</span> X</td><td>Xoloitzcuintli</td><td>Non-Sporting</td><td>14</td><td>14</td></tr>
+      <tr><td><span class="lilpuppies" aria-hidden="true">Y</span> Y</td><td>Yorkshire Terrier</td><td>Toy</td><td>3</td><td>13.5</td></tr>
+      </tbody>
+    </table>
+  </details>
+  </section>
+  <div class="tip" id="tip" role="tooltip"></div>
 
   <footer>
     Silhouettes traced from photos in the Stanford Dogs Dataset (Khosla et al. 2011, from ImageNet), served by the
     Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too. The
-    source photo for every letter is listed in <code>weedogs.json</code> and README.md. LilPuppies is not affiliated with
-    ProPublica and uses none of WeePeople&rsquo;s shapes.
+    source photo for every letter is listed in <code>lilpuppies.json</code> and README.md. LilPuppies is not affiliated with
+    ProPublica and uses none of WeePeople&rsquo;s shapes. Inspired by
+    <a href="https://github.com/propublica/weepeople">WeePeople</a>.
   </footer>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const BREEDS = [{"c":"A","breed":"Afghan Hound","group":"Hound","kg":25,"yrs":13},{"c":"B","breed":"Basset Hound","group":"Hound","kg":27,"yrs":12},{"c":"C","breed":"Chihuahua","group":"Toy","kg":2,"yrs":16},{"c":"D","breed":"Dachshund","group":"Hound","kg":10,"yrs":14},{"c":"E","breed":"American Eskimo Dog","group":"Non-Sporting","kg":11,"yrs":14},{"c":"F","breed":"French Bulldog","group":"Non-Sporting","kg":11,"yrs":11},{"c":"G","breed":"Great Dane","group":"Working","kg":63,"yrs":8.5},{"c":"H","breed":"Siberian Husky","group":"Working","kg":23,"yrs":13},{"c":"I","breed":"Irish Wolfhound","group":"Hound","kg":60,"yrs":7.5},{"c":"J","breed":"Japanese Chin","group":"Toy","kg":3.5,"yrs":11},{"c":"K","breed":"Kelpie","group":"Herding","kg":17,"yrs":12.5},{"c":"L","breed":"Leonberger","group":"Working","kg":55,"yrs":8},{"c":"M","breed":"Alaskan Malamute","group":"Working","kg":36,"yrs":11},{"c":"N","breed":"Newfoundland","group":"Working","kg":60,"yrs":9},{"c":"O","breed":"Otterhound","group":"Hound","kg":47,"yrs":11},{"c":"P","breed":"Papillon","group":"Toy","kg":4,"yrs":15},{"c":"Q","breed":"Beagle","group":"Hound","kg":10,"yrs":13},{"c":"R","breed":"Rhodesian Ridgeback","group":"Hound","kg":35,"yrs":11},{"c":"S","breed":"Saluki","group":"Hound","kg":23,"yrs":13},{"c":"T","breed":"Tibetan Mastiff","group":"Working","kg":60,"yrs":11},{"c":"U","breed":"Border Collie","group":"Herding","kg":18,"yrs":13.5},{"c":"V","breed":"Vizsla","group":"Sporting","kg":23,"yrs":13},{"c":"W","breed":"Weimaraner","group":"Sporting","kg":32,"yrs":12},{"c":"X","breed":"Xoloitzcuintli","group":"Non-Sporting","kg":14,"yrs":14},{"c":"Y","breed":"Yorkshire Terrier","group":"Toy","kg":3,"yrs":13.5},{"c":"Z","breed":"Scottish Deerhound","group":"Hound","kg":41,"yrs":9},{"c":"a","breed":"Akita","group":"Working","kg":45,"yrs":11},{"c":"b","breed":"Boxer","group":"Working","kg":30,"yrs":11},{"c":"c","breed":"Cocker Spaniel","group":"Sporting","kg":12,"yrs":13.5},{"c":"d","breed":"Doberman Pinscher","group":"Working","kg":38,"yrs":11},{"c":"e","breed":"English Springer Spaniel","group":"Sporting","kg":22,"yrs":13},{"c":"f","breed":"Fox Terrier","group":"Terrier","kg":8,"yrs":13.5},{"c":"g","breed":"German Shepherd","group":"Herding","kg":32,"yrs":11},{"c":"h","breed":"Bloodhound","group":"Hound","kg":45,"yrs":11},{"c":"i","breed":"Ibizan Hound","group":"Hound","kg":22,"yrs":13},{"c":"j","breed":"Russell Terrier","group":"Terrier","kg":6,"yrs":13},{"c":"k","breed":"Kuvasz","group":"Working","kg":45,"yrs":11},{"c":"l","breed":"Lhasa Apso","group":"Non-Sporting","kg":6,"yrs":13.5},{"c":"m","breed":"Miniature Pinscher","group":"Toy","kg":4.5,"yrs":13.5},{"c":"n","breed":"Norwegian Elkhound","group":"Hound","kg":22,"yrs":13.5},{"c":"o","breed":"Old English Sheepdog","group":"Herding","kg":34,"yrs":11},{"c":"p","breed":"Standard Poodle","group":"Non-Sporting","kg":25,"yrs":13.5},{"c":"q","breed":"Borzoi","group":"Hound","kg":38,"yrs":10.5},{"c":"r","breed":"Redbone Coonhound","group":"Hound","kg":29,"yrs":13.5},{"c":"s","breed":"Scottish Terrier","group":"Terrier","kg":9,"yrs":12},{"c":"t","breed":"Toy Terrier","group":"Toy","kg":3.5,"yrs":13},{"c":"u","breed":"Samoyed","group":"Working","kg":25,"yrs":13},{"c":"v","breed":"Pembroke Welsh Corgi","group":"Herding","kg":12,"yrs":13.5},{"c":"w","breed":"Whippet","group":"Hound","kg":13,"yrs":13.5},{"c":"x","breed":"Basenji","group":"Hound","kg":10,"yrs":14},{"c":"y","breed":"Airedale Terrier","group":"Terrier","kg":25,"yrs":11.5},{"c":"z","breed":"St. Bernard","group":"Working","kg":70,"yrs":9}];
+(() => {
+  const tip = document.getElementById("tip");
+  const showTip = (ev, text) => {
+    tip.textContent = text; tip.style.opacity = 1;
+    const x = Math.min(ev.clientX + 14, innerWidth - tip.offsetWidth - 8);
+    const y = ev.clientY + 16 + tip.offsetHeight > innerHeight ? ev.clientY - tip.offsetHeight - 10 : ev.clientY + 16;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  };
+  const hideTip = () => { tip.style.opacity = 0; };
+  document.querySelectorAll("[data-tip]").forEach(el => {
+    el.addEventListener("pointermove", ev => showTip(ev, el.dataset.tip));
+    el.addEventListener("pointerleave", hideTip);
+  });
+  if (!window.d3) return;  // the force and scatter charts need d3; the unit bar chart is plain HTML
+
+  // Glyphs stand on the baseline and are about 0.68em tall, so shift down to center one on a point.
+  const LIFT = 0.34;
+  const legend = (id, items) => {
+    document.getElementById(id).innerHTML = items.map(([label, color, ch]) =>
+      `<li><span class="lilpuppies" style="color:${color}" aria-hidden="true">${ch}</span>${label}</li>`).join("");
+  };
+
+  // ---- Force layout: 100 dogs ----
+  {
+    const svg = d3.select("#force"), W = 960, H = 400, SIZE = 34, R = 17;
+    const OUT = [
+      { key: "Adopted", n: 58, color: "var(--s1)" },
+      { key: "In foster care", n: 27, color: "var(--s2)" },
+      { key: "Waiting", n: 15, color: "var(--s3)" },
+    ];
+    legend("force-legend", OUT.map(o => [`${o.key} (${o.n})`, o.color, "Q"]));
+    const nodes = [];
+    OUT.forEach((o, gi) => { for (let i = 0; i < o.n; i++) nodes.push({ g: gi }); });
+    // Deterministic pseudo-random start so the pack looks the same on every load.
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    nodes.forEach((d, i) => {
+      d.b = BREEDS[(i * 17) % BREEDS.length];
+      const a = rnd() * Math.PI * 2, r = rnd() * 160;
+      d.x = W / 2 + Math.cos(a) * r; d.y = H / 2 + Math.sin(a) * r;
+    });
+    // Cluster centers for split mode; each cluster's width grows with the square root of its count.
+    const cx = [0.29, 0.65, 0.875].map(f => f * W);
+    const labels = svg.append("g");
+    const dogs = svg.append("g").selectAll("text").data(nodes).join("text")
+      .attr("class", "dog").attr("text-anchor", "middle").attr("font-size", SIZE)
+      .attr("fill", d => OUT[d.g].color).text(d => d.b.c)
+      .on("pointermove", (ev, d) => showTip(ev, `${d.b.breed} · ${OUT[d.g].key}`))
+      .on("pointerleave", hideTip);
+    const sim = d3.forceSimulation(nodes)
+      .force("collide", d3.forceCollide(R).strength(0.9))
+      .on("tick", () => dogs.attr("x", d => d.x).attr("y", d => d.y + SIZE * LIFT));
+    const setMode = mode => {
+      const split = mode === "split";
+      sim.force("x", d3.forceX(d => split ? cx[d.g] : W / 2).strength(split ? 0.12 : 0.06))
+         .force("y", d3.forceY(H / 2 + (split ? 14 : 0)).strength(split ? 0.12 : 0.06))
+         .alpha(1).restart();
+      labels.selectAll("text").data(split ? OUT : []).join("text").attr("class", "clabel")
+        .attr("text-anchor", "middle").attr("x", (o, i) => cx[i]).attr("y", 16)
+        .text(o => o.key).append("tspan").attr("dx", 6).text(o => o.n);
+      document.querySelectorAll(".vbtns button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === mode));
+    };
+    document.querySelectorAll(".vbtns button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+    setMode("pack");
+  }
+
+  // ---- Scatter: weight vs lifespan ----
+  {
+    const svg = d3.select("#scatter"), W = 960, H = 540, SIZE = 30;
+    const m = { top: 16, right: 24, bottom: 52, left: 56 };
+    const COLORED = { Hound: "var(--s1)", Working: "var(--s2)", Toy: "var(--s3)" };
+    const color = g => COLORED[g] || "var(--other)";
+    legend("scatter-legend", [
+      ["Hound", COLORED.Hound, "A"], ["Working", COLORED.Working, "N"], ["Toy", COLORED.Toy, "C"],
+      ["Other groups", "var(--other)", "U"],
+    ]);
+    const x = d3.scaleLog().domain([1.5, 90]).range([m.left, W - m.right]);
+    const y = d3.scaleLinear().domain([6.5, 17]).range([H - m.bottom, m.top]);
+    svg.append("g").attr("class", "grid").selectAll("line").data(y.ticks(6)).join("line")
+      .attr("x1", m.left).attr("x2", W - m.right).attr("y1", d => y(d)).attr("y2", d => y(d));
+    svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`)
+      .call(d3.axisBottom(x).tickValues([2, 5, 10, 20, 50]).tickFormat(d => d + " kg").tickSizeOuter(0));
+    svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left},0)`)
+      .call(d3.axisLeft(y).ticks(6).tickFormat(d => d + " yr").tickSizeOuter(0)).call(g => g.select(".domain").remove());
+    svg.append("text").attr("class", "note").attr("x", W - m.right).attr("y", H - 10).attr("text-anchor", "end")
+      .text("Typical adult weight (log scale) →");
+    svg.append("text").attr("class", "note").attr("x", m.left + 6).attr("y", m.top + 4).text("↑ Typical lifespan");
+    // Colored breeds draw on top of the gray ones.
+    const data = BREEDS.map(b => ({ ...b, tx: x(b.kg), ty: y(b.yrs) }))
+      .sort((a, b) => (a.group in COLORED) - (b.group in COLORED));
+    data.forEach(d => { d.x = d.tx; d.y = d.ty; });
+    // Settle once, without animation: pull each dog to its true point, push overlapping dogs apart.
+    const sim = d3.forceSimulation(data).stop()
+      .force("x", d3.forceX(d => d.tx).strength(0.5)).force("y", d3.forceY(d => d.ty).strength(0.5))
+      .force("collide", d3.forceCollide(13));
+    for (let i = 0; i < 200; i++) sim.tick();
+    svg.append("g").selectAll("text").data(data).join("text")
+      .attr("class", "dog").attr("text-anchor", "middle").attr("font-size", SIZE)
+      .attr("x", d => d.x).attr("y", d => d.y + SIZE * LIFT).attr("fill", d => color(d.group)).text(d => d.c)
+      .on("pointermove", (ev, d) => showTip(ev, `${d.breed} (${d.group}) · ${d.kg} kg · ${d.yrs} yr`))
+      .on("pointerleave", hideTip);
+    // A few direct labels for the extremes: [label, dx, dy, anchor] relative to the dog.
+    const call = { C: ["Chihuahua", 18, 4, "start"], z: ["St. Bernard", 0, -16, "middle"], I: ["Irish Wolfhound", -18, 4, "end"] };
+    svg.append("g").selectAll("text").data(data.filter(d => d.c in call)).join("text")
+      .attr("class", "note").attr("x", d => d.x + call[d.c][1]).attr("y", d => d.y + call[d.c][2])
+      .attr("text-anchor", d => call[d.c][3]).text(d => call[d.c][0]);
+  }
+})();
+</script>
 <script>
   const t = document.getElementById("try"), o = document.getElementById("out");
   t.addEventListener("input", () => { o.textContent = t.value; });

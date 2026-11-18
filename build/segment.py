@@ -5,7 +5,7 @@ dog, whole (not cut off by the frame), not overlapped by a person, seen from the
 standing, so its legs show as separate shapes at the bottom of the outline.
 
 Writes .cache/masks/<breed>/<photo>.png (the dog's mask, cropped to the dog) and
-.cache/segments.json (one record per photo, with its score). Usage (from weedogs/):
+.cache/segments.json (one record per photo, with its score). Usage (from LilPuppies/):
     python -I build/segment.py
 """
 import json

@@ -1,21 +1,21 @@
-# WeeDogs
+# LilPuppies
 
-A font of dog silhouettes for unit charts, in the spirit of ProPublica's [WeePeople](https://github.com/propublica/weepeople). It covers the same characters as WeePeople: **A–Z and a–z** are 52 different dogs, and space is a dog-width gap. WeePeople has no digits, so WeeDogs has none either.
+A font of dog silhouettes for unit charts, in the spirit of ProPublica's [WeePeople](https://github.com/propublica/weepeople). It covers the same characters as WeePeople: **A–Z and a–z** are 52 different dogs, and space is a dog-width gap. WeePeople has no digits, so LilPuppies has none either.
 
 Each glyph is a different breed, traced from a photo in the [Dog CEO API](https://dog.ceo/dog-api/). Where a breed's name allows it, the letter is its initial (uppercase and lowercase are different breeds), so `B` is a basset hound and `b` a boxer. Dog CEO has no breeds starting with Q, U or Z, and only one each for O, V, X and Y, so some of those letters use other breeds.
 
-![Every WeeDogs glyph](weedogs_all.png)
+![Every LilPuppies glyph](lilpuppies_all.png)
 
 Open `index.html` for a demo.
 
 ## Use
 
 ```html
-<link rel="stylesheet" href="weedogs.css">
-<span class="weedogs">BbDdGg</span>
+<link rel="stylesheet" href="lilpuppies.css">
+<span class="lilpuppies">BbDdGg</span>
 ```
 
-`weedogs.css` embeds the font, so it is the only file you need. You can also load `weedogs.woff2`, `weedogs.woff` or `weedogs.ttf` with your own `@font-face`.
+`lilpuppies.css` embeds the font, so it is the only file you need. You can also load `lilpuppies.woff2`, `lilpuppies.woff` or `lilpuppies.ttf` with your own `@font-face`.
 
 Every dog has the same advance width (1,000 units per em, like WeePeople's fixed-width people), so rows of dogs line up in a grid. Dogs stand on the baseline and are scaled to fit a 900 × 680 box, so a chihuahua is drawn as large as a Great Dane. Color them with CSS `color`.
 
@@ -78,12 +78,12 @@ Every dog has the same advance width (1,000 units per em, like WeePeople's fixed
 | `z` | St. Bernard | [n02109525_10297.jpg](https://images.dog.ceo/breeds/stbernard/n02109525_10297.jpg) |
 <!-- /KEY -->
 
-`weedogs.json` has the same key in machine-readable form.
+`lilpuppies.json` has the same key in machine-readable form.
 
 ## License and credits
 
-- **Source photos:** Stanford Dogs Dataset (Khosla A. et al. 2011, *Novel dataset for fine-grained image categorization*, from ImageNet), served by the Dog CEO API. The dataset is licensed for **non-commercial research and education**. The silhouettes are traced from these photos, so **WeeDogs is for non-commercial use**.
-- **Inspiration:** ProPublica's [WeePeople](https://github.com/propublica/weepeople) (CC BY-NC-ND 3.0 US). WeeDogs is not affiliated with ProPublica and uses none of WeePeople's shapes. It follows only the idea, the character set and the vertical metrics (1,000 units per em, ascender 800, descender −200).
+- **Source photos:** Stanford Dogs Dataset (Khosla A. et al. 2011, *Novel dataset for fine-grained image categorization*, from ImageNet), served by the Dog CEO API. The dataset is licensed for **non-commercial research and education**. The silhouettes are traced from these photos, so **LilPuppies is for non-commercial use**.
+- **Inspiration:** ProPublica's [WeePeople](https://github.com/propublica/weepeople) (CC BY-NC-ND 3.0 US). LilPuppies is not affiliated with ProPublica and uses none of WeePeople's shapes. It follows only the idea, the character set and the vertical metrics (1,000 units per em, ascender 800, descender −200).
 
 ## Rebuild
 
@@ -93,5 +93,5 @@ The build needs Python 3.12 with `torch`, `torchvision` (CPU is fine), `fonttool
 2. `python -I build/segment.py` cuts each dog out with torchvision's Mask R-CNN (COCO weights). It keeps photos with exactly one dog, whole in the frame and not overlapped by a person. It scores each dog for a side-on, standing pose, judged by whether the legs show as separate shapes.
 3. `python -I build/contact.py` draws contact sheets of the best candidates per breed in `.cache/sheets/`, for choosing by eye.
 4. Edit `build/glyphs.json`. For each character it gives the breed, the photo's file name, and whether to mirror the dog (`flip`) so all dogs face the same way.
-5. `python -I build/build_font.py` traces the masks with potrace and writes the fonts, `weedogs.css`, `weedogs.json` and `weedogs_all.png`.
+5. `python -I build/build_font.py` traces the masks with potrace and writes the fonts, `lilpuppies.css`, `lilpuppies.json` and `lilpuppies_all.png`.
 6. `python -I build/demo.py` writes `index.html` and the key table above.

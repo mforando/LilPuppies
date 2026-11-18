@@ -1,12 +1,12 @@
-"""Trace the chosen dog silhouettes and build the WeeDogs font.
+"""Trace the chosen dog silhouettes and build the LilPuppies font.
 
 Reads build/glyphs.json (one photo per character, picked from the contact sheets) and the
-masks in .cache/masks/, and writes to weedogs/:
-    weedogs.ttf, weedogs.woff, weedogs.woff2   the font
-    weedogs.css                                @font-face with the font embedded, plus .weedogs
-    weedogs.json                               each character's breed and source photo
-    weedogs_all.png                            every glyph with its character
-Usage (from weedogs/): python -I build/build_font.py
+masks in .cache/masks/, and writes to LilPuppies/:
+    lilpuppies.ttf, lilpuppies.woff, lilpuppies.woff2   the font
+    lilpuppies.css                                @font-face with the font embedded, plus .lilpuppies
+    lilpuppies.json                               each character's breed and source photo
+    lilpuppies_all.png                            every glyph with its character
+Usage (from LilPuppies/): python -I build/build_font.py
 """
 import base64
 import json
@@ -169,11 +169,11 @@ def main():
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=ASCENT, descent=DESCENT)
     fb.setupNameTable({
-        "familyName": "WeeDogs",
+        "familyName": "LilPuppies",
         "styleName": "Regular",
-        "uniqueFontIdentifier": f"WeeDogs-Regular-{VERSION}",
-        "fullName": "WeeDogs Regular",
-        "psName": "WeeDogs-Regular",
+        "uniqueFontIdentifier": f"LilPuppies-Regular-{VERSION}",
+        "fullName": "LilPuppies Regular",
+        "psName": "LilPuppies-Regular",
         "version": f"Version {VERSION}",
         "description": "Dog silhouettes for unit charts, one breed per letter. Inspired by ProPublica's WeePeople; "
                        "traced from Dog CEO API photos (Stanford Dogs Dataset).",
@@ -186,23 +186,23 @@ def main():
     stamp = timestampNow()
     fb.setupHead(unitsPerEm=UPM, created=stamp, modified=stamp)
 
-    ttf = os.path.join(ROOT, "weedogs.ttf")
+    ttf = os.path.join(ROOT, "lilpuppies.ttf")
     fb.save(ttf)
     for flavor in ("woff", "woff2"):
         f = TTFont(ttf)
         f.flavor = flavor
-        f.save(os.path.join(ROOT, f"weedogs.{flavor}"))
+        f.save(os.path.join(ROOT, f"lilpuppies.{flavor}"))
 
-    b64 = {fl: base64.b64encode(open(os.path.join(ROOT, f"weedogs.{fl}"), "rb").read()).decode() for fl in ("woff2", "woff")}
-    with open(os.path.join(ROOT, "weedogs.css"), "w", encoding="utf8") as fh:
+    b64 = {fl: base64.b64encode(open(os.path.join(ROOT, f"lilpuppies.{fl}"), "rb").read()).decode() for fl in ("woff2", "woff")}
+    with open(os.path.join(ROOT, "lilpuppies.css"), "w", encoding="utf8") as fh:
         fh.write(
-            "/* WeeDogs: dog silhouettes for unit charts. See README.md for the key and license. */\n"
-            "@font-face {\n  font-family: 'WeeDogs';\n  font-weight: normal;\n  font-style: normal;\n"
+            "/* LilPuppies: dog silhouettes for unit charts. See README.md for the key and license. */\n"
+            "@font-face {\n  font-family: 'LilPuppies';\n  font-weight: normal;\n  font-style: normal;\n"
             f"  src: url(data:font/woff2;base64,{b64['woff2']}) format('woff2'),\n"
             f"       url(data:font/woff;base64,{b64['woff']}) format('woff');\n}}\n\n"
-            ".weedogs {\n  font-family: 'WeeDogs';\n}\n"
+            ".lilpuppies {\n  font-family: 'LilPuppies';\n}\n"
         )
-    with open(os.path.join(ROOT, "weedogs.json"), "w", encoding="utf8") as fh:
+    with open(os.path.join(ROOT, "lilpuppies.json"), "w", encoding="utf8") as fh:
         json.dump(key, fh, indent=1, ensure_ascii=False)
 
     # Preview sheet: every glyph with its character.
@@ -217,7 +217,7 @@ def main():
         x, y = (i % cols) * cell, (i // cols) * (cell + 20)
         d.text((x + cell / 2, y + 88), ch, font=font, fill="black", anchor="ms")
         d.text((x + cell / 2, y + cell + 6), ch, font=label, fill=(120, 120, 120), anchor="mm")
-    img.save(os.path.join(ROOT, "weedogs_all.png"))
+    img.save(os.path.join(ROOT, "lilpuppies_all.png"))
     print(f"built {len(spec)} glyphs:", " ".join(chars))
 
 

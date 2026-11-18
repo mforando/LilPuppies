@@ -2,7 +2,7 @@
 
 Writes .cache/sheets/sheet-NN.png. Each row is one breed; each tile is labelled
 "<rank>" and the photo's file name, which is what glyphs.json refers to.
-Usage (from weedogs/): python -I build/contact.py [per_breed] [breeds_per_sheet] [breed ...]
+Usage (from LilPuppies/): python -I build/contact.py [per_breed] [breeds_per_sheet] [breed ...]
 """
 import json
 import os

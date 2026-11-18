@@ -1,6 +1,6 @@
-"""Download candidate photos from the Dog CEO API into weedogs/.cache/images/<breed>/.
+"""Download candidate photos from the Dog CEO API into LilPuppies/.cache/images/<breed>/.
 
-Usage (from weedogs/): python -I build/fetch.py [photos_per_breed]
+Usage (from LilPuppies/): python -I build/fetch.py [photos_per_breed]
 """
 import json
 import os
@@ -14,7 +14,7 @@ from breeds import ALL  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, ".cache", "images")
-UA = {"User-Agent": "WeeDogs-font-build/1.0 (https://github.com/mforando/DogGenes)"}
+UA = {"User-Agent": "LilPuppies-font-build/1.0 (https://github.com/mforando/DogGenes)"}
 PER = int(sys.argv[1]) if len(sys.argv) > 1 else 24
 
 
