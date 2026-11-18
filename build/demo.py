@@ -31,7 +31,7 @@ page = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeeDogs</title>
+<title>LilPuppies</title>
 <link rel="stylesheet" href="weedogs.css">
 <style>
   :root {{ --bg: #faf8f4; --ink: #1d1b18; --ink-2: #5d5850; --line: #e3ded4; --accent: #b4552d; }}
@@ -60,7 +60,7 @@ page = f"""<!doctype html>
 </head>
 <body>
 <main>
-  <h1>WeeDogs</h1>
+  <h1>LilPuppies</h1>
   <p>A font of dog silhouettes for unit charts, in the spirit of ProPublica&rsquo;s
     <a href="https://github.com/propublica/weepeople">WeePeople</a>. Each of the {len(key)} letters is a different breed,
     traced from a photo in the <a href="https://dog.ceo/dog-api/">Dog CEO API</a>. Where a breed&rsquo;s name allows it,
@@ -93,8 +93,8 @@ page = f"""<!doctype html>
 
   <footer>
     Silhouettes traced from photos in the Stanford Dogs Dataset (Khosla et al. 2011, from ImageNet), served by the
-    Dog CEO API; licensed for non-commercial research and education, so WeeDogs is for non-commercial use too. The
-    source photo for every letter is listed in <code>weedogs.json</code> and README.md. WeeDogs is not affiliated with
+    Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too. The
+    source photo for every letter is listed in <code>weedogs.json</code> and README.md. LilPuppies is not affiliated with
     ProPublica and uses none of WeePeople&rsquo;s shapes.
   </footer>
 </main>
