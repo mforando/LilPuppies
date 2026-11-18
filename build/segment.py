@@ -88,10 +88,10 @@ def main():
             if not dogs:
                 rec["why"] = "no dog"
                 continue
-            if len(dogs) > 1:
-                rec["why"] = "several dogs"
-                continue
-            i = dogs[0]
+            # A photo that fails one of the checks below still keeps its mask (ok stays False, "why" says
+            # what failed), as a fallback for breeds with only one or two photos.
+            why = "several dogs" if len(dogs) > 1 else None
+            i = max(dogs, key=lambda k: scores[k])
             prob = masks[i]
             m = prob > 0.5
             if m.sum() < 500:
@@ -101,17 +101,15 @@ def main():
             h, w = m.shape
             ys, xs = np.nonzero(m)
             x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
-            if x0 <= 2 or y0 <= 2 or x1 >= w - 3 or y1 >= h - 3:
-                rec["why"] = "cut off by the frame"
-                continue
+            if not why and (x0 <= 2 or y0 <= 2 or x1 >= w - 3 or y1 >= h - 3):
+                why = "cut off by the frame"
             people = [j for j in range(len(labels)) if labels[j] == PERSON and scores[j] >= 0.5]
             overlap = 0.0
             for j in people:
                 pm = masks[j] > 0.5
                 overlap = max(overlap, float((pm[y0:y1 + 1, x0:x1 + 1]).sum()) / float(m.sum()))
-            if overlap > 0.04:
-                rec["why"] = "person in the way"
-                continue
+            if not why and overlap > 0.04:
+                why = "person in the way"
             aspect = (x1 - x0 + 1) / (y1 - y0 + 1)
             sharp = float(np.abs(prob[m] - 0.5).mean() * 2)  # 1 = crisp edges, 0 = unsure
             legs = leg_score(m)
@@ -122,7 +120,9 @@ def main():
             mp = os.path.join(CACHE, "masks", key.rsplit(".", 1)[0] + ".png")
             os.makedirs(os.path.dirname(mp), exist_ok=True)
             Image.fromarray(crop).save(mp)
-            rec.update(ok=True, score=round(score, 4), det=round(float(scores[i]), 3), aspect=round(float(aspect), 2),
+            if why:
+                rec["why"] = why
+            rec.update(ok=not why, score=round(score, 4), det=round(float(scores[i]), 3), aspect=round(float(aspect), 2),
                        legs=round(legs, 2), sharp=round(sharp, 2), solidity=round(solidity, 2), box=[int(x0), int(y0), int(x1), int(y1)],
                        size=[w, h], mask=os.path.relpath(mp, CACHE).replace("\\", "/"))
         json.dump(done, open(out_path, "w"), indent=0)

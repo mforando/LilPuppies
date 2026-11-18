@@ -1,0 +1,1552 @@
+{
+ "WOLF": {
+  "name": "Grey Wolf",
+  "clade": "Wild",
+  "char": "",
+  "codepoint": "U+E000",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/500px-Eurasian_wolf_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+  "author": "User:Mas3cf",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "BSJI": {
+  "name": "Basenji",
+  "clade": "Basenji",
+  "char": "",
+  "codepoint": "U+E001",
+  "letter": "x",
+  "photo": "https://images.dog.ceo/breeds/basenji/n02110806_402.jpg",
+  "source": "Dog CEO"
+ },
+ "XIGO": {
+  "name": "Xigou",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E002",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/%E4%B8%80%E9%9A%BB%E9%81%A0%E8%99%95%E7%9A%84%E9%BB%91%E8%89%B2%E9%99%9D%E8%A5%BF%E7%B4%B0%E7%8A%AC.jpg/500px-%E4%B8%80%E9%9A%BB%E9%81%A0%E8%99%95%E7%9A%84%E9%BB%91%E8%89%B2%E9%99%9D%E8%A5%BF%E7%B4%B0%E7%8A%AC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:%E4%B8%80%E9%9A%BB%E9%81%A0%E8%99%95%E7%9A%84%E9%BB%91%E8%89%B2%E9%99%9D%E8%A5%BF%E7%B4%B0%E7%8A%AC.jpg",
+  "author": "Wtf35861887",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
+ "CHTM": {
+  "name": "Tibetan Mastiff - COO",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E003",
+  "letter": "T",
+  "sameDogAs": "TIBM",
+  "photo": "https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_2111.jpg",
+  "source": "Dog CEO"
+ },
+ "TIBM": {
+  "name": "Tibetan Mastiff - USA",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E004",
+  "letter": "T",
+  "photo": "https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_2111.jpg",
+  "source": "Dog CEO"
+ },
+ "HUSK": {
+  "name": "Siberian Husky",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E005",
+  "letter": "H",
+  "photo": "https://images.dog.ceo/breeds/husky/n02110185_7210.jpg",
+  "source": "Dog CEO"
+ },
+ "GREE": {
+  "name": "Greenland Sledge Dog",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E006",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Greenland_dog_upernavik_2007-06-02_sample.jpg/500px-Greenland_dog_upernavik_2007-06-02_sample.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Greenland_dog_upernavik_2007-06-02_sample.jpg",
+  "author": "Slaunger, edited by Thegreenj",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "AMAL": {
+  "name": "Alaskan Malamute",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E007",
+  "letter": "M",
+  "photo": "https://images.dog.ceo/breeds/malamute/n02110063_12656.jpg",
+  "source": "Dog CEO"
+ },
+ "SHIB": {
+  "name": "Shiba Inu",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E008",
+  "photo": "https://images.dog.ceo/breeds/shiba/shiba-1.jpg",
+  "source": "Dog CEO"
+ },
+ "AKIT": {
+  "name": "Akita",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E009",
+  "letter": "a",
+  "photo": "https://images.dog.ceo/breeds/akita/japaneseakita.jpg",
+  "source": "Dog CEO"
+ },
+ "SHAR": {
+  "name": "Chinese Shar-Pei",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E00A",
+  "photo": "https://images.dog.ceo/breeds/sharpei/noel.jpg",
+  "source": "Dog CEO"
+ },
+ "CHOW": {
+  "name": "Chow Chow",
+  "clade": "AsianSpitz",
+  "char": "",
+  "codepoint": "U+E00B",
+  "photo": "https://images.dog.ceo/breeds/chow/modi2.jpg",
+  "source": "Dog CEO"
+ },
+ "EURA": {
+  "name": "Eurasier",
+  "clade": null,
+  "char": "",
+  "codepoint": "U+E00C",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/3/36/Eurasier_BailyWtatze.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Eurasier_BailyWtatze.jpg",
+  "author": "Kerstin Kühnel Wuppertatzen",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
+ "SAMO": {
+  "name": "Samoyed",
+  "clade": null,
+  "char": "",
+  "codepoint": "U+E00D",
+  "letter": "u",
+  "photo": "https://images.dog.ceo/breeds/samoyed/n02111889_1374.jpg",
+  "source": "Dog CEO"
+ },
+ "FINS": {
+  "name": "Finish Spitz",
+  "clade": null,
+  "char": "",
+  "codepoint": "U+E00E",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Finnish_Spitz_600.jpg/500px-Finnish_Spitz_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Finnish_Spitz_600.jpg",
+  "author": "Unknown author",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "CHIN": {
+  "name": "Japanese Chin",
+  "clade": "AsianToy",
+  "char": "",
+  "codepoint": "U+E00F",
+  "letter": "J",
+  "photo": "https://images.dog.ceo/breeds/spaniel-japanese/n02085782_4574.jpg",
+  "source": "Dog CEO"
+ },
+ "TIBS": {
+  "name": "Tibetan Spaniel",
+  "clade": "AsianToy",
+  "char": "",
+  "codepoint": "U+E010",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Tibetansk_spaniel.jpg/500px-Tibetansk_spaniel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Tibetansk_spaniel.jpg",
+  "author": "Wolfman1",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "PEKE": {
+  "name": "Pekingese",
+  "clade": "AsianToy",
+  "char": "",
+  "codepoint": "U+E011",
+  "photo": "https://images.dog.ceo/breeds/pekinese/n02086079_606.jpg",
+  "source": "Dog CEO"
+ },
+ "LHSA": {
+  "name": "Lhasa Apso",
+  "clade": "AsianToy",
+  "char": "",
+  "codepoint": "U+E012",
+  "letter": "l",
+  "photo": "https://images.dog.ceo/breeds/lhasa/n02098413_7571.jpg",
+  "source": "Dog CEO"
+ },
+ "SHIH": {
+  "name": "Shih Tzu",
+  "clade": "AsianToy",
+  "char": "",
+  "codepoint": "U+E013",
+  "photo": "https://images.dog.ceo/breeds/shihtzu/n02086240_1665.jpg",
+  "source": "Dog CEO"
+ },
+ "TIBT": {
+  "name": "Tibetan Terrier",
+  "clade": null,
+  "char": "",
+  "codepoint": "U+E014",
+  "photo": "https://images.dog.ceo/breeds/terrier-tibetan/n02097474_2941.jpg",
+  "source": "Dog CEO"
+ },
+ "NELK": {
+  "name": "Norwegian Elkhound",
+  "clade": "NordicSpitz",
+  "char": "",
+  "codepoint": "U+E015",
+  "letter": "n",
+  "photo": "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_4906.jpg",
+  "source": "Dog CEO"
+ },
+ "SVAL": {
+  "name": "Swedish Vallhund",
+  "clade": "NordicSpitz",
+  "char": "",
+  "codepoint": "U+E016",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/V%C3%A4stg%C3%B6taspets_hane_5_%C3%A5r.jpg/500px-V%C3%A4stg%C3%B6taspets_hane_5_%C3%A5r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:V%C3%A4stg%C3%B6taspets_hane_5_%C3%A5r.jpg",
+  "author": "TS Eriksson",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+ },
+ "ICES": {
+  "name": "Icelandic Sheepdog",
+  "clade": "NordicSpitz",
+  "char": "",
+  "codepoint": "U+E017",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Icelandic_Sheepdog_Alisa_von_Lehenberg.jpg/500px-Icelandic_Sheepdog_Alisa_von_Lehenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Icelandic_Sheepdog_Alisa_von_Lehenberg.jpg",
+  "author": "Veronica Druk",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "KEES": {
+  "name": "Keeshond",
+  "clade": "NordicSpitz",
+  "char": "",
+  "codepoint": "U+E018",
+  "photo": "https://images.dog.ceo/breeds/keeshond/n02112350_8572.jpg",
+  "source": "Dog CEO"
+ },
+ "SSNZ": {
+  "name": "Standard Schnauzer",
+  "clade": "Schnauzer",
+  "char": "",
+  "codepoint": "U+E019",
+  "photo": "https://images.dog.ceo/breeds/schnauzer/n02097209_479.jpg",
+  "source": "Dog CEO"
+ },
+ "MSNZ": {
+  "name": "Miniature Schnauzer",
+  "clade": "Schnauzer",
+  "char": "",
+  "codepoint": "U+E01A",
+  "photo": "https://images.dog.ceo/breeds/schnauzer-miniature/n02097047_6203.jpg",
+  "source": "Dog CEO"
+ },
+ "AESK": {
+  "name": "American Eskimo Dog",
+  "clade": "SmallSpitz",
+  "char": "",
+  "codepoint": "U+E01B",
+  "letter": "E",
+  "photo": "https://images.dog.ceo/breeds/eskimo/n02109961_4157.jpg",
+  "source": "Dog CEO"
+ },
+ "VPIN": {
+  "name": "Volpino",
+  "clade": "SmallSpitz",
+  "char": "",
+  "codepoint": "U+E01C",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_%28cropped%29.JPG/500px-Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_(cropped).JPG",
+  "author": "Lilly M real name: Małgorzata Miłaszewska",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "POM": {
+  "name": "Pomeranian",
+  "clade": "SmallSpitz",
+  "char": "",
+  "codepoint": "U+E01D",
+  "photo": "https://images.dog.ceo/breeds/pomeranian/n02112018_9753.jpg",
+  "source": "Dog CEO"
+ },
+ "SKIP": {
+  "name": "Schipperke",
+  "clade": "ToySpitz",
+  "char": "",
+  "codepoint": "U+E01E",
+  "photo": "https://images.dog.ceo/breeds/schipperke/n02104365_5411.jpg",
+  "source": "Dog CEO"
+ },
+ "PAPI": {
+  "name": "Papillon",
+  "clade": "ToySpitz",
+  "char": "",
+  "codepoint": "U+E01F",
+  "letter": "P",
+  "photo": "https://images.dog.ceo/breeds/papillon/n02086910_9579.jpg",
+  "source": "Dog CEO"
+ },
+ "BRUS": {
+  "name": "Brussels Griffon",
+  "clade": "ToySpitz",
+  "char": "",
+  "codepoint": "U+E020",
+  "photo": "https://images.dog.ceo/breeds/brabancon/n02112706_292.jpg",
+  "source": "Dog CEO"
+ },
+ "PUG": {
+  "name": "PugDog",
+  "clade": "ToySpitz",
+  "char": "",
+  "codepoint": "U+E021",
+  "photo": "https://images.dog.ceo/breeds/pug/n02110958_15129.jpg",
+  "source": "Dog CEO"
+ },
+ "PUMI": {
+  "name": "Pumi",
+  "clade": "Hungarian",
+  "char": "",
+  "codepoint": "U+E023",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Pumi_2.jpg/500px-Pumi_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Pumi_2.jpg",
+  "author": "Caronna",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "COTO": {
+  "name": "Coton de Tulear",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E024",
+  "photo": "https://images.dog.ceo/breeds/cotondetulear/img_20160830_202631573.jpg",
+  "source": "Dog CEO"
+ },
+ "PTWD": {
+  "name": "Portuguese Water Dog",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E025",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg/500px-C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg",
+  "author": "Silke Hollje-Schumacher",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "SPOO": {
+  "name": "Standard Poodle",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E026",
+  "letter": "p",
+  "photo": "https://images.dog.ceo/breeds/poodle-standard/n02113799_7438.jpg",
+  "source": "Dog CEO"
+ },
+ "TPOO": {
+  "name": "Toy Poodle",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E027",
+  "photo": "https://images.dog.ceo/breeds/poodle-toy/n02113624_2308.jpg",
+  "source": "Dog CEO"
+ },
+ "MPOO": {
+  "name": "Miniature Poodle",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E028",
+  "photo": "https://images.dog.ceo/breeds/poodle-miniature/n02113712_5289.jpg",
+  "source": "Dog CEO"
+ },
+ "BICH": {
+  "name": "Bichon Frise",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E029",
+  "photo": "https://images.dog.ceo/breeds/frise-bichon/jh-ezio-2.jpg",
+  "source": "Dog CEO"
+ },
+ "HAVA": {
+  "name": "Havanese",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E02A",
+  "photo": "https://images.dog.ceo/breeds/havanese/00100trportrait_00100_burst20191112123933390_cover.jpg",
+  "source": "Dog CEO"
+ },
+ "MALT": {
+  "name": "Maltese",
+  "clade": "Poodle",
+  "char": "",
+  "codepoint": "U+E02B",
+  "photo": "https://images.dog.ceo/breeds/maltese/n02085936_1244.jpg",
+  "source": "Dog CEO"
+ },
+ "RATT": {
+  "name": "Rat Terrier",
+  "clade": "AmericanTerrier",
+  "char": "",
+  "codepoint": "U+E02C",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Amberina_the_Rat_Terrier.jpg/500px-Amberina_the_Rat_Terrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Amberina_the_Rat_Terrier.jpg",
+  "author": "Jadenschaul",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "TYFX": {
+  "name": "Toy Fox Terrier",
+  "clade": "AmericanTerrier",
+  "char": "",
+  "codepoint": "U+E02D",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Toy_Fox_Terrier_2.jpg/500px-Toy_Fox_Terrier_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Toy_Fox_Terrier_2.jpg",
+  "author": "Terry Best",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "AHRT": {
+  "name": "American Hairless Terrier",
+  "clade": "AmericanTerrier",
+  "char": "",
+  "codepoint": "U+E02E",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/American_Hairless_Terrier_Adelor.jpg/500px-American_Hairless_Terrier_Adelor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:American_Hairless_Terrier_Adelor.jpg",
+  "author": "Nyaah",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "CRES": {
+  "name": "Chinese Crested",
+  "clade": "AmericanToy",
+  "char": "",
+  "codepoint": "U+E02F",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/500px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:IndyStands.jpg",
+  "author": "Tommy Gildseth",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+ },
+ "CHIH": {
+  "name": "Chihuahua",
+  "clade": "AmericanToy",
+  "char": "",
+  "codepoint": "U+E030",
+  "letter": "C",
+  "photo": "https://images.dog.ceo/breeds/chihuahua/black_chihuahua.jpg",
+  "source": "Dog CEO"
+ },
+ "MNTY": {
+  "name": "Toy Manchester Terrier",
+  "clade": "Pinscher",
+  "char": "",
+  "codepoint": "U+E031",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/ToyManchesterTerrier.jpg/500px-ToyManchesterTerrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:ToyManchesterTerrier.jpg",
+  "author": "sally9258",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "MPIN": {
+  "name": "Miniature Pinscher",
+  "clade": "Pinscher",
+  "char": "",
+  "codepoint": "U+E032",
+  "letter": "m",
+  "photo": "https://images.dog.ceo/breeds/pinscher-miniature/n02107312_5599.jpg",
+  "source": "Dog CEO"
+ },
+ "AIRT": {
+  "name": "Airedale Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E033",
+  "letter": "y",
+  "photo": "https://images.dog.ceo/breeds/airedale/n02096051_3538.jpg",
+  "source": "Dog CEO"
+ },
+ "KERY": {
+  "name": "Kerry Blue Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E034",
+  "photo": "https://images.dog.ceo/breeds/terrier-kerryblue/n02093859_1003.jpg",
+  "source": "Dog CEO"
+ },
+ "GLEN": {
+  "name": "Glen of Imaal Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E035",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Blue_Brindle_Adult_Glen_of_Imaal_Terrier.jpg/500px-Blue_Brindle_Adult_Glen_of_Imaal_Terrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Blue_Brindle_Adult_Glen_of_Imaal_Terrier.jpg",
+  "author": "Irish-Terrier-2023",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "SCWT": {
+  "name": "Soft Coated Wheaten Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E036",
+  "photo": "https://images.dog.ceo/breeds/terrier-wheaten/n02098105_3731.jpg",
+  "source": "Dog CEO"
+ },
+ "IRIT": {
+  "name": "Irish Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E037",
+  "photo": "https://images.dog.ceo/breeds/terrier-irish/n02093991_1335.jpg",
+  "source": "Dog CEO"
+ },
+ "BEDT": {
+  "name": "Bedlington Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E038",
+  "photo": "https://images.dog.ceo/breeds/terrier-bedlington/n02093647_1791.jpg",
+  "source": "Dog CEO"
+ },
+ "BORT": {
+  "name": "Border Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E039",
+  "photo": "https://images.dog.ceo/breeds/terrier-border/n02093754_1062.jpg",
+  "source": "Dog CEO"
+ },
+ "PARS": {
+  "name": "Parson Russell Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03A",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/05052881_PRT_braun_rau.jpg/500px-05052881_PRT_braun_rau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:05052881_PRT_braun_rau.jpg",
+  "author": "Alephalpha",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "JACK": {
+  "name": "Jack Russell terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03B",
+  "letter": "j",
+  "photo": "https://images.dog.ceo/breeds/terrier-russell/jack-koda-1.jpg",
+  "source": "Dog CEO"
+ },
+ "WFOX": {
+  "name": "Wire Fox Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03C",
+  "letter": "f",
+  "photo": "https://images.dog.ceo/breeds/terrier-fox/n02095314_2205.jpg",
+  "source": "Dog CEO"
+ },
+ "AUST": {
+  "name": "Australian Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03D",
+  "photo": "https://images.dog.ceo/breeds/terrier-australian/n02096294_2432.jpg",
+  "source": "Dog CEO"
+ },
+ "SILK": {
+  "name": "Silky Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03E",
+  "photo": "https://images.dog.ceo/breeds/terrier-silky/n02097658_2329.jpg",
+  "source": "Dog CEO"
+ },
+ "YORK": {
+  "name": "Yorkshire Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E03F",
+  "letter": "Y",
+  "photo": "https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_3766.jpg",
+  "source": "Dog CEO"
+ },
+ "NOWT": {
+  "name": "Norwich Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E040",
+  "photo": "https://images.dog.ceo/breeds/terrier-norwich/n02094258_847.jpg",
+  "source": "Dog CEO"
+ },
+ "NORF": {
+  "name": "Norfolk Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E041",
+  "photo": "https://images.dog.ceo/breeds/terrier-norfolk/n02094114_4501.jpg",
+  "source": "Dog CEO"
+ },
+ "SCOT": {
+  "name": "Scottish Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E042",
+  "letter": "s",
+  "photo": "https://images.dog.ceo/breeds/terrier-scottish/n02097298_825.jpg",
+  "source": "Dog CEO"
+ },
+ "CAIR": {
+  "name": "Cairn Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E043",
+  "photo": "https://images.dog.ceo/breeds/terrier-cairn/n02096177_13114.jpg",
+  "source": "Dog CEO"
+ },
+ "WHWT": {
+  "name": "West Highland White Terrier",
+  "clade": "Terrier",
+  "char": "",
+  "codepoint": "U+E044",
+  "photo": "https://images.dog.ceo/breeds/terrier-westhighland/n02098286_275.jpg",
+  "source": "Dog CEO"
+ },
+ "MXOL": {
+  "name": "Miniature Xoloitzcuintli",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E045",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/BIR_Grupp_5-_MEXIKANSK_NAKENHUND%2C_Lokal_Hero%E2%80%99s_King_Og_Hart%E2%80%99s_Istas_%2823607403303%29.jpg/500px-BIR_Grupp_5-_MEXIKANSK_NAKENHUND%2C_Lokal_Hero%E2%80%99s_King_Og_Hart%E2%80%99s_Istas_%2823607403303%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:BIR_Grupp_5-_MEXIKANSK_NAKENHUND,_Lokal_Hero%E2%80%99s_King_Og_Hart%E2%80%99s_Istas_(23607403303).jpg",
+  "author": "Svenska Mässan from Sweden",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "XOLO": {
+  "name": "Xoloitzcuintli",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E046",
+  "letter": "X",
+  "photo": "https://images.dog.ceo/breeds/mexicanhairless/n02113978_451.jpg",
+  "source": "Dog CEO"
+ },
+ "INCA": {
+  "name": "Peruvian Hairless Dog",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E047",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/8/81/PHDStandardStanding_-_Perro_Sin_Pelo_del_Per%C3%BA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:PHDStandardStanding_-_Perro_Sin_Pelo_del_Per%C3%BA.jpg",
+  "author": "Brunobarreto",
+  "license": "Public domain"
+ },
+ "COOK": {
+  "name": "Chinook",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E048",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Mountan_Laurel_Ajax_the_Chinook_dog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Mountan_Laurel_Ajax_the_Chinook_dog.jpg",
+  "author": "Unknown author",
+  "license": "Copyrighted free use"
+ },
+ "BPIC": {
+  "name": "Berger Picard",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E049",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Picard_Delice_Stacked.jpg/500px-Picard_Delice_Stacked.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Picard_Delice_Stacked.jpg",
+  "author": "Cufleadh",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "CPAT": {
+  "name": "Cane Paratore",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E04A",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Cane_Paratore.jpg/500px-Cane_Paratore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Cane_Paratore.jpg",
+  "author": "Chili The Border Collie",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "GSD": {
+  "name": "German Shepherd Dog",
+  "clade": "NewWorld",
+  "char": "",
+  "codepoint": "U+E04B",
+  "letter": "g",
+  "photo": "https://images.dog.ceo/breeds/german-shepherd/n02106662_21348.jpg",
+  "source": "Dog CEO"
+ },
+ "GPYR": {
+  "name": "Great Pyrenees",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E04C",
+  "photo": "https://images.dog.ceo/breeds/pyrenees/n02111500_9003.jpg",
+  "source": "Dog CEO"
+ },
+ "PHAR": {
+  "name": "Pharaoh Hound",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E04D",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Pies_faraona_e34.jpg/500px-Pies_faraona_e34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Pies_faraona_e34.jpg",
+  "author": "Pleple2000",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "CIRN": {
+  "name": "Cirneco dell'Etna",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E04E",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Cirneco_dell_Etna_611.jpg/500px-Cirneco_dell_Etna_611.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Cirneco_dell_Etna_611.jpg",
+  "author": "de:Benutzer:Jan Eduard, contrast Pleple2000",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "IBIZ": {
+  "name": "Ibizan Hound",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E04F",
+  "letter": "i",
+  "photo": "https://images.dog.ceo/breeds/hound-ibizan/n02091244_596.jpg",
+  "source": "Dog CEO"
+ },
+ "KOMO": {
+  "name": "Komondor",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E050",
+  "photo": "https://images.dog.ceo/breeds/komondor/n02105505_4271.jpg",
+  "source": "Dog CEO"
+ },
+ "KUVZ": {
+  "name": "Kuvasz",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E051",
+  "letter": "k",
+  "photo": "https://images.dog.ceo/breeds/kuvasz/n02104029_4800.jpg",
+  "source": "Dog CEO"
+ },
+ "SLOU": {
+  "name": "Sloughi",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E053",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sloughi_male.jpg/500px-Sloughi_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Sloughi_male.jpg",
+  "author": "Denhulde",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "AZWK": {
+  "name": "Azawakh",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E055",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Bistrita_2015_%2822%29.jpg/500px-Bistrita_2015_%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Bistrita_2015_(22).jpg",
+  "author": "Cristian.vantu",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "ANAT": {
+  "name": "Anatolian Shepherd",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E056",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Kangal_front_on.jpg/500px-Kangal_front_on.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Kangal_front_on.jpg",
+  "author": "Kangalshepherddog",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "AFGH": {
+  "name": "Afghan Hound",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E057",
+  "letter": "A",
+  "photo": "https://images.dog.ceo/breeds/hound-afghan/n02088094_7146.jpg",
+  "source": "Dog CEO"
+ },
+ "COOS": {
+  "name": "Saluki - COO",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E058",
+  "letter": "S",
+  "sameDogAs": "SALU",
+  "photo": "https://images.dog.ceo/breeds/saluki/n02091831_3108.jpg",
+  "source": "Dog CEO"
+ },
+ "SALU": {
+  "name": "Saluki - USA",
+  "clade": "Mediterranean",
+  "char": "",
+  "codepoint": "U+E059",
+  "letter": "S",
+  "photo": "https://images.dog.ceo/breeds/saluki/n02091831_3108.jpg",
+  "source": "Dog CEO"
+ },
+ "DACH": {
+  "name": "Dachshund",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05A",
+  "letter": "D",
+  "photo": "https://images.dog.ceo/breeds/dachshund/dachshund-1018409_640.jpg",
+  "source": "Dog CEO"
+ },
+ "PBGV": {
+  "name": "Petit Basset Griffon Vendeen",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05B",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/P_Basset_Griffon_Vendeen_600.jpg/500px-P_Basset_Griffon_Vendeen_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:P_Basset_Griffon_Vendeen_600.jpg",
+  "author": "Sannse",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "BASS": {
+  "name": "Basset Hound",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05C",
+  "letter": "B",
+  "photo": "https://images.dog.ceo/breeds/hound-basset/n02088238_6708.jpg",
+  "source": "Dog CEO"
+ },
+ "REDB": {
+  "name": "Redbone Coonhound",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05D",
+  "letter": "r",
+  "photo": "https://images.dog.ceo/breeds/redbone/n02090379_3372.jpg",
+  "source": "Dog CEO"
+ },
+ "BEAG": {
+  "name": "Beagle",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05E",
+  "letter": "Q",
+  "photo": "https://images.dog.ceo/breeds/beagle/n02088364_10206.jpg",
+  "source": "Dog CEO"
+ },
+ "FOXH": {
+  "name": "Foxhound",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E05F",
+  "photo": "https://images.dog.ceo/breeds/hound-english/n02089973_3647.jpg",
+  "source": "Dog CEO"
+ },
+ "OTTR": {
+  "name": "Otterhound",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E060",
+  "letter": "O",
+  "photo": "https://images.dog.ceo/breeds/otterhound/n02091635_2482.jpg",
+  "source": "Dog CEO"
+ },
+ "BLDH": {
+  "name": "Bloodhound",
+  "clade": "ScentHound",
+  "char": "",
+  "codepoint": "U+E061",
+  "letter": "h",
+  "photo": "https://images.dog.ceo/breeds/hound-blood/n02088466_8950.jpg",
+  "source": "Dog CEO"
+ },
+ "ESSP": {
+  "name": "English Springer Spaniel",
+  "clade": "Spaniel",
+  "char": "",
+  "codepoint": "U+E062",
+  "letter": "e",
+  "photo": "https://images.dog.ceo/breeds/springer-english/n02102040_5145.jpg",
+  "source": "Dog CEO"
+ },
+ "CKCS": {
+  "name": "Cavalier King Charles Spaniel",
+  "clade": "Spaniel",
+  "char": "",
+  "codepoint": "U+E063",
+  "photo": "https://images.dog.ceo/breeds/spaniel-blenheim/n02086646_1246.jpg",
+  "source": "Dog CEO"
+ },
+ "ACKR": {
+  "name": "American Cocker Spaniel",
+  "clade": "Spaniel",
+  "char": "",
+  "codepoint": "U+E064",
+  "letter": "c",
+  "photo": "https://images.dog.ceo/breeds/spaniel-cocker/n02102318_12053.jpg",
+  "source": "Dog CEO"
+ },
+ "FIEL": {
+  "name": "Field Spaniel",
+  "clade": "Spaniel",
+  "char": "",
+  "codepoint": "U+E065",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Field_spaniel_581.jpg/500px-Field_spaniel_581.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Field_spaniel_581.jpg",
+  "author": "Pleple2000",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "ECKR": {
+  "name": "English Cocker Spaniel",
+  "clade": "Spaniel",
+  "char": "",
+  "codepoint": "U+E066",
+  "letter": "c",
+  "photo": "https://images.dog.ceo/breeds/spaniel-cocker/n02102318_12053.jpg",
+  "source": "Dog CEO"
+ },
+ "NSDT": {
+  "name": "Nova Scotia Duck Tolling Retriever",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E067",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Duck_Toller.jpg/500px-Duck_Toller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Duck_Toller.jpg",
+  "author": "Cal119 at English Wikipedia",
+  "license": "Public domain"
+ },
+ "CCRT": {
+  "name": "Curly-coated Retriever",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E068",
+  "photo": "https://images.dog.ceo/breeds/retriever-curly/n02099429_1372.jpg",
+  "source": "Dog CEO"
+ },
+ "IWSP": {
+  "name": "Irish Water Spaniel",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E069",
+  "photo": "https://images.dog.ceo/breeds/spaniel-irish/n02102973_4566.jpg",
+  "source": "Dog CEO"
+ },
+ "NEWF": {
+  "name": "Newfoundland",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E06A",
+  "letter": "N",
+  "photo": "https://images.dog.ceo/breeds/newfoundland/n02111277_399.jpg",
+  "source": "Dog CEO"
+ },
+ "LAB": {
+  "name": "Labrador Retriever",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E06B",
+  "photo": "https://images.dog.ceo/breeds/labrador/n02099712_4845.jpg",
+  "source": "Dog CEO"
+ },
+ "GOLD": {
+  "name": "Golden Retriever",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E06C",
+  "photo": "https://images.dog.ceo/breeds/retriever-golden/n02099601_7119.jpg",
+  "source": "Dog CEO"
+ },
+ "FCR": {
+  "name": "Flat-coated Retriever",
+  "clade": "Retriever",
+  "char": "",
+  "codepoint": "U+E06D",
+  "photo": "https://images.dog.ceo/breeds/retriever-flatcoated/n02099267_5073.jpg",
+  "source": "Dog CEO"
+ },
+ "DALM": {
+  "name": "Dalmatian",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E06E",
+  "photo": "https://images.dog.ceo/breeds/dalmatian/cooper1.jpg",
+  "source": "Dog CEO"
+ },
+ "WEIM": {
+  "name": "Weimaraner",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E06F",
+  "letter": "W",
+  "photo": "https://images.dog.ceo/breeds/weimaraner/n02092339_748.jpg",
+  "source": "Dog CEO"
+ },
+ "LMUN": {
+  "name": "Large Munsterlander",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E070",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/6/61/GrosserMuensterlaender.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:GrosserMuensterlaender.jpg",
+  "author": "Pia C. Groening",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "VIZS": {
+  "name": "Vizsla",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E071",
+  "letter": "V",
+  "photo": "https://images.dog.ceo/breeds/vizsla/n02100583_12308.jpg",
+  "source": "Dog CEO"
+ },
+ "WHPG": {
+  "name": "Wirehaired Pointing Griffon",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E072",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/GCH_Int_Ch_UCH_Zerubbabel_von_Herrenhausen_CGC_MHA.jpg/500px-GCH_Int_Ch_UCH_Zerubbabel_von_Herrenhausen_CGC_MHA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:GCH_Int_Ch_UCH_Zerubbabel_von_Herrenhausen_CGC_MHA.jpg",
+  "author": "CarolPtak",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "GWHP": {
+  "name": "German Wirehaired Pointer",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E073",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Dan_vom_hardenberg_%28cropped%29.jpg/500px-Dan_vom_hardenberg_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Dan_vom_hardenberg_(cropped).jpg",
+  "author": "JainaKo",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "GSHP": {
+  "name": "German Shorthaired Pointer",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E074",
+  "photo": "https://images.dog.ceo/breeds/pointer-german/n02100236_619.jpg",
+  "source": "Dog CEO"
+ },
+ "SPIN": {
+  "name": "Spinone Italiano",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E075",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/05042363_Spinone_braun.jpg/500px-05042363_Spinone_braun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:05042363_Spinone_braun.jpg",
+  "author": "Alephalpha",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "BRIT": {
+  "name": "Brittany",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E076",
+  "photo": "https://images.dog.ceo/breeds/spaniel-brittany/n02101388_990.jpg",
+  "source": "Dog CEO"
+ },
+ "ISET": {
+  "name": "Irish Setter",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E077",
+  "photo": "https://images.dog.ceo/breeds/setter-irish/n02100877_585.jpg",
+  "source": "Dog CEO"
+ },
+ "ESET": {
+  "name": "English Setter",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E078",
+  "photo": "https://images.dog.ceo/breeds/setter-english/n02100735_4949.jpg",
+  "source": "Dog CEO"
+ },
+ "GORD": {
+  "name": "Gordon Setter",
+  "clade": "PointerSetter",
+  "char": "",
+  "codepoint": "U+E079",
+  "photo": "https://images.dog.ceo/breeds/setter-gordon/n02101006_751.jpg",
+  "source": "Dog CEO"
+ },
+ "BRIA": {
+  "name": "Briard",
+  "clade": "ContinentalHerder",
+  "char": "",
+  "codepoint": "U+E07A",
+  "photo": "https://images.dog.ceo/breeds/briard/n02105251_7950.jpg",
+  "source": "Dog CEO"
+ },
+ "BOUV": {
+  "name": "Bouvier des Flandres",
+  "clade": "ContinentalHerder",
+  "char": "",
+  "codepoint": "U+E07B",
+  "photo": "https://images.dog.ceo/breeds/bouvier/n02106382_3571.jpg",
+  "source": "Dog CEO"
+ },
+ "BMAL": {
+  "name": "Belgian Malinois",
+  "clade": "ContinentalHerder",
+  "char": "",
+  "codepoint": "U+E07C",
+  "photo": "https://images.dog.ceo/breeds/malinois/n02105162_7593.jpg",
+  "source": "Dog CEO"
+ },
+ "TURV": {
+  "name": "Belgian Tervuren",
+  "clade": "ContinentalHerder",
+  "char": "",
+  "codepoint": "U+E07D",
+  "photo": "https://images.dog.ceo/breeds/tervuren/shadow_and_lake.jpg",
+  "source": "Dog CEO"
+ },
+ "BELS": {
+  "name": "Belgian Sheepdog",
+  "clade": "ContinentalHerder",
+  "char": "",
+  "codepoint": "U+E07E",
+  "photo": "https://images.dog.ceo/breeds/groenendael/n02105056_3741.jpg",
+  "source": "Dog CEO"
+ },
+ "ITGY": {
+  "name": "Italian Greyhound",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E07F",
+  "photo": "https://images.dog.ceo/breeds/greyhound-italian/n02091032_11088.jpg",
+  "source": "Dog CEO"
+ },
+ "BORZ": {
+  "name": "Borzoi",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E080",
+  "letter": "q",
+  "photo": "https://images.dog.ceo/breeds/borzoi/n02090622_8236.jpg",
+  "source": "Dog CEO"
+ },
+ "IWOF": {
+  "name": "Irish Wolfhound",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E081",
+  "letter": "I",
+  "photo": "https://images.dog.ceo/breeds/wolfhound-irish/n02090721_452.jpg",
+  "source": "Dog CEO"
+ },
+ "DEER": {
+  "name": "Scottish Deerhound",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E082",
+  "letter": "Z",
+  "photo": "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_2981.jpg",
+  "source": "Dog CEO"
+ },
+ "WHIP": {
+  "name": "Whippet",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E083",
+  "letter": "w",
+  "photo": "https://images.dog.ceo/breeds/whippet/n02091134_732.jpg",
+  "source": "Dog CEO"
+ },
+ "GREY": {
+  "name": "Greyhound",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E084",
+  "photo": "https://images.dog.ceo/breeds/greyhound/cordelia.jpg",
+  "source": "Dog CEO"
+ },
+ "OES": {
+  "name": "Old English Sheepdog",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E085",
+  "letter": "o",
+  "photo": "https://images.dog.ceo/breeds/sheepdog-english/n02105641_12297.jpg",
+  "source": "Dog CEO"
+ },
+ "AUCD": {
+  "name": "Australian Cattle Dog",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E086",
+  "photo": "https://images.dog.ceo/breeds/cattledog-australian/img_3668.jpg",
+  "source": "Dog CEO"
+ },
+ "BERD": {
+  "name": "Bearded Collie",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E087",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Bearded_Collie_600.jpg/500px-Bearded_Collie_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Bearded_Collie_600.jpg",
+  "author": "Unknown author",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "KELP": {
+  "name": "Kelpie",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E088",
+  "letter": "K",
+  "photo": "https://images.dog.ceo/breeds/kelpie/n02105412_3075.jpg",
+  "source": "Dog CEO"
+ },
+ "BORD": {
+  "name": "Border Collie",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E089",
+  "letter": "U",
+  "photo": "https://images.dog.ceo/breeds/collie-border/n02106166_615.jpg",
+  "source": "Dog CEO"
+ },
+ "PEMB": {
+  "name": "Pembroke Welsh Corgi",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E08A",
+  "letter": "v",
+  "photo": "https://images.dog.ceo/breeds/pembroke/n02113023_4269.jpg",
+  "source": "Dog CEO"
+ },
+ "CARD": {
+  "name": "Cardigan Welsh Corgi",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E08B",
+  "photo": "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_9579.jpg",
+  "source": "Dog CEO"
+ },
+ "AUSS": {
+  "name": "Australian Shepherd",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E08C",
+  "photo": "https://images.dog.ceo/breeds/australian-shepherd/leroy.jpg",
+  "source": "Dog CEO"
+ },
+ "COLL": {
+  "name": "Collie",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E08D",
+  "photo": "https://images.dog.ceo/breeds/rough-collie/1dog-rough-collie-portrait.jpg",
+  "source": "Dog CEO"
+ },
+ "SSHP": {
+  "name": "Shetland Sheepdog",
+  "clade": "UKRural",
+  "char": "",
+  "codepoint": "U+E08E",
+  "photo": "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_12087.jpg",
+  "source": "Dog CEO"
+ },
+ "DOBP": {
+  "name": "Doberman Pinscher",
+  "clade": "Drover",
+  "char": "",
+  "codepoint": "U+E08F",
+  "letter": "d",
+  "photo": "https://images.dog.ceo/breeds/doberman/n02107142_8399.jpg",
+  "source": "Dog CEO"
+ },
+ "GSNZ": {
+  "name": "Giant Schnauzer",
+  "clade": "Drover",
+  "char": "",
+  "codepoint": "U+E090",
+  "photo": "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_3628.jpg",
+  "source": "Dog CEO"
+ },
+ "BRTR": {
+  "name": "Black Russian Terrier",
+  "clade": "Drover",
+  "char": "",
+  "codepoint": "U+E091",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Wystawa_Rybnik_02.10.2011_czarny_terier_rosyjski_2pl.jpg/500px-Wystawa_Rybnik_02.10.2011_czarny_terier_rosyjski_2pl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Wystawa_Rybnik_02.10.2011_czarny_terier_rosyjski_2pl.jpg",
+  "author": "Pleple2000",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "ROTT": {
+  "name": "Rottweiler",
+  "clade": "Drover",
+  "char": "",
+  "codepoint": "U+E092",
+  "photo": "https://images.dog.ceo/breeds/rottweiler/n02106550_9432.jpg",
+  "source": "Dog CEO"
+ },
+ "GSMD": {
+  "name": "Greater Swiss Mountain Dog",
+  "clade": "Alpine",
+  "char": "",
+  "codepoint": "U+E093",
+  "photo": "https://images.dog.ceo/breeds/mountain-swiss/n02107574_2650.jpg",
+  "source": "Dog CEO"
+ },
+ "BMD": {
+  "name": "Bernese Mountain Dog",
+  "clade": "Alpine",
+  "char": "",
+  "codepoint": "U+E094",
+  "photo": "https://images.dog.ceo/breeds/mountain-bernese/n02107683_1244.jpg",
+  "source": "Dog CEO"
+ },
+ "LEON": {
+  "name": "Leonberger",
+  "clade": "Alpine",
+  "char": "",
+  "codepoint": "U+E095",
+  "letter": "L",
+  "photo": "https://images.dog.ceo/breeds/leonberg/n02111129_2617.jpg",
+  "source": "Dog CEO"
+ },
+ "STBD": {
+  "name": "Saint Bernard",
+  "clade": "Alpine",
+  "char": "",
+  "codepoint": "U+E096",
+  "letter": "z",
+  "photo": "https://images.dog.ceo/breeds/stbernard/n02109525_10297.jpg",
+  "source": "Dog CEO"
+ },
+ "RHOD": {
+  "name": "Rhodesian Ridgeback",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E097",
+  "letter": "R",
+  "photo": "https://images.dog.ceo/breeds/ridgeback-rhodesian/n02087394_2319.jpg",
+  "source": "Dog CEO"
+ },
+ "DANE": {
+  "name": "Great Dane",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E098",
+  "letter": "G",
+  "photo": "https://images.dog.ceo/breeds/dane-great/n02109047_12569.jpg",
+  "source": "Dog CEO"
+ },
+ "ITCC": {
+  "name": "Cane Corso - COO",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E099",
+  "sameDogAs": "CANE",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Cane_corso_temi_1_1024x768x24_%28cropped%29.png/500px-Cane_corso_temi_1_1024x768x24_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Cane_corso_temi_1_1024x768x24_(cropped).png",
+  "author": "Claudio Domiziani",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ },
+ "CANE": {
+  "name": "Cane Corso - USA",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09A",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Cane_corso_temi_1_1024x768x24_%28cropped%29.png/500px-Cane_corso_temi_1_1024x768x24_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Cane_corso_temi_1_1024x768x24_(cropped).png",
+  "author": "Claudio Domiziani",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ },
+ "NEAP": {
+  "name": "Neapolitan Mastiff",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09B",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/5_Year_old_male_in_Napoli_Stance_%282%29.jpg/500px-5_Year_old_male_in_Napoli_Stance_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:5_Year_old_male_in_Napoli_Stance_(2).jpg",
+  "author": "Philip Thompson",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "BOER": {
+  "name": "Boerboel",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09C",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Boerboelmusta3.jpg/500px-Boerboelmusta3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Boerboelmusta3.jpg",
+  "author": "Canarian",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+ },
+ "BULM": {
+  "name": "Bullmastiff",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09D",
+  "photo": "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1975.jpg",
+  "source": "Dog CEO"
+ },
+ "MAST": {
+  "name": "English Mastiff",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09E",
+  "photo": "https://images.dog.ceo/breeds/mastiff-english/3.jpg",
+  "source": "Dog CEO"
+ },
+ "AMST": {
+  "name": "American Staffordshire Terrier",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E09F",
+  "photo": "https://images.dog.ceo/breeds/terrier-american/n02093428_19652.jpg",
+  "source": "Dog CEO"
+ },
+ "STAF": {
+  "name": "Staffordshire Bull Terrier",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A0",
+  "photo": "https://images.dog.ceo/breeds/bullterrier-staffordshire/n02093256_1275.jpg",
+  "source": "Dog CEO"
+ },
+ "MBLT": {
+  "name": "Miniature Bull Terrier",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A1",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Minibull_2_Moletai_May_2014.jpg/500px-Minibull_2_Moletai_May_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Minibull_2_Moletai_May_2014.jpg",
+  "author": "Томасина",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "BULT": {
+  "name": "Bull Terrier",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A2",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Bullterrier-3453301920.jpg/500px-Bullterrier-3453301920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Bullterrier-3453301920.jpg",
+  "author": "Pixabay User TC-TORRES",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
+ "FBUL": {
+  "name": "French Bulldog",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A3",
+  "letter": "F",
+  "photo": "https://images.dog.ceo/breeds/bulldog-french/n02108915_2807.jpg",
+  "source": "Dog CEO"
+ },
+ "BOST": {
+  "name": "Boston Terrier",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A4",
+  "photo": "https://images.dog.ceo/breeds/bulldog-boston/n02096585_6855.jpg",
+  "source": "Dog CEO"
+ },
+ "DDBX": {
+  "name": "Dogue de Bordeaux",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A5",
+  "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/French_Mastiff_female_4.jpg/500px-French_Mastiff_female_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:French_Mastiff_female_4.jpg",
+  "author": "Canarian",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "BULD": {
+  "name": "Bulldog",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A6",
+  "photo": "https://images.dog.ceo/breeds/bulldog-english/jager-1.jpg",
+  "source": "Dog CEO"
+ },
+ "BOX": {
+  "name": "Boxer",
+  "clade": "EuropeanMastiff",
+  "char": "",
+  "codepoint": "U+E0A7",
+  "letter": "b",
+  "photo": "https://images.dog.ceo/breeds/boxer/n02108089_5977.jpg",
+  "source": "Dog CEO"
+ }
+}

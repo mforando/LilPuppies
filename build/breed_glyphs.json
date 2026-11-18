@@ -1,0 +1,878 @@
+{
+ "WOLF": {
+  "file": "wikimedia/WOLF/Eurasian_wolf_2.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BSJI": {
+  "file": "basenji/n02110806_402.jpg",
+  "flip": true,
+  "letter": "x",
+  "auto": true
+ },
+ "XIGO": {
+  "file": "wikimedia/XIGO/photo_8c3ae00878.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "TIBM": {
+  "file": "mastiff-tibetan/n02108551_2111.jpg",
+  "flip": false,
+  "letter": "T",
+  "auto": true
+ },
+ "HUSK": {
+  "file": "husky/n02110185_7210.jpg",
+  "flip": true,
+  "letter": "H",
+  "auto": true
+ },
+ "GREE": {
+  "file": "wikimedia/GREE/Greenland_dog_upernavik_2007-06-02_sample.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "AMAL": {
+  "file": "malamute/n02110063_12656.jpg",
+  "flip": true,
+  "letter": "M",
+  "auto": true
+ },
+ "SHIB": {
+  "file": "shiba/shiba-1.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "AKIT": {
+  "file": "akita/japaneseakita.jpg",
+  "flip": false,
+  "letter": "a",
+  "auto": true
+ },
+ "SHAR": {
+  "file": "sharpei/noel.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "CHOW": {
+  "file": "chow/modi2.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "EURA": {
+  "file": "wikimedia/EURA/Eurasier_BailyWtatze.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SAMO": {
+  "file": "samoyed/n02111889_1374.jpg",
+  "flip": true,
+  "letter": "u",
+  "auto": true
+ },
+ "FINS": {
+  "file": "wikimedia/FINS/Finnish_Spitz_600.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "CHIN": {
+  "file": "spaniel-japanese/n02085782_4574.jpg",
+  "flip": true,
+  "letter": "J",
+  "auto": true
+ },
+ "TIBS": {
+  "file": "wikimedia/TIBS/Tibetansk_spaniel.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "PEKE": {
+  "file": "pekinese/n02086079_606.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "LHSA": {
+  "file": "lhasa/n02098413_7571.jpg",
+  "flip": true,
+  "letter": "l",
+  "auto": true
+ },
+ "SHIH": {
+  "file": "shihtzu/n02086240_1665.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "TIBT": {
+  "file": "terrier-tibetan/n02097474_2941.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "NELK": {
+  "file": "elkhound-norwegian/n02091467_4906.jpg",
+  "flip": false,
+  "letter": "n",
+  "auto": true
+ },
+ "SVAL": {
+  "file": "wikimedia/SVAL/V_stg_taspets_hane_5__r.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "ICES": {
+  "file": "wikimedia/ICES/Icelandic_Sheepdog_Alisa_von_Lehenberg.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "KEES": {
+  "file": "keeshond/n02112350_8572.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SSNZ": {
+  "file": "schnauzer/n02097209_479.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "MSNZ": {
+  "file": "schnauzer-miniature/n02097047_6203.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "AESK": {
+  "file": "eskimo/n02109961_4157.jpg",
+  "flip": false,
+  "letter": "E",
+  "auto": true
+ },
+ "VPIN": {
+  "file": "wikimedia/VPIN/Szpic_miniaturowy_Volpino_MWPR_Katowice_2008__cropped.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "POM": {
+  "file": "pomeranian/n02112018_9753.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "SKIP": {
+  "file": "schipperke/n02104365_5411.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "PAPI": {
+  "file": "papillon/n02086910_9579.jpg",
+  "flip": true,
+  "letter": "P",
+  "auto": true
+ },
+ "BRUS": {
+  "file": "brabancon/n02112706_292.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "PUG": {
+  "file": "pug/n02110958_15129.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "PUMI": {
+  "file": "wikimedia/PUMI/Pumi_2.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "several dogs"
+ },
+ "COTO": {
+  "file": "cotondetulear/img_20160830_202631573.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "PTWD": {
+  "file": "wikimedia/PTWD/C_o_de_agua_Portugu_s_2.jpg",
+  "flip": false,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "SPOO": {
+  "file": "poodle-standard/n02113799_7438.jpg",
+  "flip": true,
+  "letter": "p",
+  "auto": true
+ },
+ "TPOO": {
+  "file": "poodle-toy/n02113624_2308.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "MPOO": {
+  "file": "poodle-miniature/n02113712_5289.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BICH": {
+  "file": "frise-bichon/jh-ezio-2.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "HAVA": {
+  "file": "havanese/00100trportrait_00100_burst20191112123933390_cover.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "MALT": {
+  "file": "maltese/n02085936_1244.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "RATT": {
+  "file": "wikimedia/RATT/Amberina_the_Rat_Terrier.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "TYFX": {
+  "file": "wikimedia/TYFX/Toy_Fox_Terrier_2.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "AHRT": {
+  "file": "wikimedia/AHRT/American_Hairless_Terrier_Adelor.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "CRES": {
+  "file": "wikimedia/CRES/IndyStands.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "CHIH": {
+  "file": "chihuahua/black_chihuahua.jpg",
+  "flip": false,
+  "letter": "C",
+  "auto": true
+ },
+ "MNTY": {
+  "file": "wikimedia/MNTY/ToyManchesterTerrier.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "MPIN": {
+  "file": "pinscher-miniature/n02107312_5599.jpg",
+  "flip": false,
+  "letter": "m",
+  "auto": true
+ },
+ "AIRT": {
+  "file": "airedale/n02096051_3538.jpg",
+  "flip": false,
+  "letter": "y",
+  "auto": true
+ },
+ "KERY": {
+  "file": "terrier-kerryblue/n02093859_1003.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "GLEN": {
+  "file": "wikimedia/GLEN/Blue_Brindle_Adult_Glen_of_Imaal_Terrier.jpg",
+  "flip": false,
+  "auto": false,
+  "fallback": "cut off by the frame"
+ },
+ "SCWT": {
+  "file": "terrier-wheaten/n02098105_3731.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "IRIT": {
+  "file": "terrier-irish/n02093991_1335.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BEDT": {
+  "file": "terrier-bedlington/n02093647_1791.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BORT": {
+  "file": "terrier-border/n02093754_1062.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "PARS": {
+  "file": "wikimedia/PARS/05052881_PRT_braun_rau.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "JACK": {
+  "file": "terrier-russell/jack-koda-1.jpg",
+  "flip": false,
+  "letter": "j",
+  "auto": true
+ },
+ "WFOX": {
+  "file": "terrier-fox/n02095314_2205.jpg",
+  "flip": true,
+  "letter": "f",
+  "auto": true
+ },
+ "AUST": {
+  "file": "terrier-australian/n02096294_2432.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SILK": {
+  "file": "terrier-silky/n02097658_2329.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "YORK": {
+  "file": "terrier-yorkshire/n02094433_3766.jpg",
+  "flip": false,
+  "letter": "Y",
+  "auto": true
+ },
+ "NOWT": {
+  "file": "terrier-norwich/n02094258_847.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "NORF": {
+  "file": "terrier-norfolk/n02094114_4501.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SCOT": {
+  "file": "terrier-scottish/n02097298_825.jpg",
+  "flip": true,
+  "letter": "s",
+  "auto": true
+ },
+ "CAIR": {
+  "file": "terrier-cairn/n02096177_13114.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "WHWT": {
+  "file": "terrier-westhighland/n02098286_275.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "MXOL": {
+  "file": "wikimedia/MXOL/BIR_Grupp_5-_MEXIKANSK_NAKENHUND__Lokal_Hero_s_King_Og_Hart.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "XOLO": {
+  "file": "mexicanhairless/n02113978_451.jpg",
+  "flip": false,
+  "letter": "X",
+  "auto": true
+ },
+ "INCA": {
+  "file": "wikimedia/INCA/PHDStandardStanding_-_Perro_Sin_Pelo_del_Per.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "COOK": {
+  "file": "wikimedia/COOK/Mountan_Laurel_Ajax_the_Chinook_dog.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BPIC": {
+  "file": "wikimedia/BPIC/Picard_Delice_Stacked.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "CPAT": {
+  "file": "wikimedia/CPAT/Cane_Paratore.jpg",
+  "flip": false,
+  "auto": false,
+  "fallback": "several dogs"
+ },
+ "GSD": {
+  "file": "german-shepherd/n02106662_21348.jpg",
+  "flip": true,
+  "letter": "g",
+  "auto": true
+ },
+ "GPYR": {
+  "file": "pyrenees/n02111500_9003.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "PHAR": {
+  "file": "wikimedia/PHAR/Pies_faraona_e34.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "CIRN": {
+  "file": "wikimedia/CIRN/Cirneco_dell_Etna_611.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "IBIZ": {
+  "file": "hound-ibizan/n02091244_596.jpg",
+  "flip": false,
+  "letter": "i",
+  "auto": true
+ },
+ "KOMO": {
+  "file": "komondor/n02105505_4271.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "KUVZ": {
+  "file": "kuvasz/n02104029_4800.jpg",
+  "flip": false,
+  "letter": "k",
+  "auto": true
+ },
+ "SLOU": {
+  "file": "wikimedia/SLOU/Sloughi_male.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "AZWK": {
+  "file": "wikimedia/AZWK/Bistrita_2015__22.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "ANAT": {
+  "file": "wikimedia/ANAT/Kangal_front_on.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "AFGH": {
+  "file": "hound-afghan/n02088094_7146.jpg",
+  "flip": true,
+  "letter": "A",
+  "auto": true
+ },
+ "SALU": {
+  "file": "saluki/n02091831_3108.jpg",
+  "flip": true,
+  "letter": "S",
+  "auto": true
+ },
+ "DACH": {
+  "file": "dachshund/dachshund-1018409_640.jpg",
+  "flip": false,
+  "letter": "D",
+  "auto": true
+ },
+ "PBGV": {
+  "file": "wikimedia/PBGV/P_Basset_Griffon_Vendeen_600.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "several dogs"
+ },
+ "BASS": {
+  "file": "hound-basset/n02088238_6708.jpg",
+  "flip": false,
+  "letter": "B",
+  "auto": true
+ },
+ "REDB": {
+  "file": "redbone/n02090379_3372.jpg",
+  "flip": false,
+  "letter": "r",
+  "auto": true
+ },
+ "BEAG": {
+  "file": "beagle/n02088364_10206.jpg",
+  "flip": false,
+  "letter": "Q",
+  "auto": true
+ },
+ "FOXH": {
+  "file": "hound-english/n02089973_3647.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "OTTR": {
+  "file": "otterhound/n02091635_2482.jpg",
+  "flip": true,
+  "letter": "O",
+  "auto": true
+ },
+ "BLDH": {
+  "file": "hound-blood/n02088466_8950.jpg",
+  "flip": true,
+  "letter": "h",
+  "auto": true
+ },
+ "ESSP": {
+  "file": "springer-english/n02102040_5145.jpg",
+  "flip": true,
+  "letter": "e",
+  "auto": true
+ },
+ "CKCS": {
+  "file": "spaniel-blenheim/n02086646_1246.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "ACKR": {
+  "file": "spaniel-cocker/n02102318_12053.jpg",
+  "flip": false,
+  "letter": "c",
+  "auto": true
+ },
+ "FIEL": {
+  "file": "wikimedia/FIEL/Field_spaniel_581.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "ECKR": {
+  "file": "spaniel-cocker/n02102318_12053.jpg",
+  "flip": false,
+  "letter": "c",
+  "auto": true
+ },
+ "NSDT": {
+  "file": "wikimedia/NSDT/Duck_Toller.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "CCRT": {
+  "file": "retriever-curly/n02099429_1372.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "IWSP": {
+  "file": "spaniel-irish/n02102973_4566.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "NEWF": {
+  "file": "newfoundland/n02111277_399.jpg",
+  "flip": true,
+  "letter": "N",
+  "auto": true
+ },
+ "LAB": {
+  "file": "labrador/n02099712_4845.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "GOLD": {
+  "file": "retriever-golden/n02099601_7119.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "FCR": {
+  "file": "retriever-flatcoated/n02099267_5073.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "DALM": {
+  "file": "dalmatian/cooper1.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "WEIM": {
+  "file": "weimaraner/n02092339_748.jpg",
+  "flip": true,
+  "letter": "W",
+  "auto": true
+ },
+ "LMUN": {
+  "file": "wikimedia/LMUN/GrosserMuensterlaender.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "VIZS": {
+  "file": "vizsla/n02100583_12308.jpg",
+  "flip": true,
+  "letter": "V",
+  "auto": true
+ },
+ "WHPG": {
+  "file": "wikimedia/WHPG/GCH_Int_Ch_UCH_Zerubbabel_von_Herrenhausen_CGC_MHA.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "GWHP": {
+  "file": "wikimedia/GWHP/Dan_vom_hardenberg__cropped.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "GSHP": {
+  "file": "pointer-german/n02100236_619.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SPIN": {
+  "file": "wikimedia/SPIN/05042363_Spinone_braun.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "BRIT": {
+  "file": "spaniel-brittany/n02101388_990.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "ISET": {
+  "file": "setter-irish/n02100877_585.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "ESET": {
+  "file": "setter-english/n02100735_4949.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "GORD": {
+  "file": "setter-gordon/n02101006_751.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BRIA": {
+  "file": "briard/n02105251_7950.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BOUV": {
+  "file": "bouvier/n02106382_3571.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BMAL": {
+  "file": "malinois/n02105162_7593.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "TURV": {
+  "file": "tervuren/shadow_and_lake.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BELS": {
+  "file": "groenendael/n02105056_3741.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "ITGY": {
+  "file": "greyhound-italian/n02091032_11088.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BORZ": {
+  "file": "borzoi/n02090622_8236.jpg",
+  "flip": false,
+  "letter": "q",
+  "auto": true
+ },
+ "IWOF": {
+  "file": "wolfhound-irish/n02090721_452.jpg",
+  "flip": false,
+  "letter": "I",
+  "auto": true
+ },
+ "DEER": {
+  "file": "deerhound-scottish/n02092002_2981.jpg",
+  "flip": true,
+  "letter": "Z",
+  "auto": true
+ },
+ "WHIP": {
+  "file": "whippet/n02091134_732.jpg",
+  "flip": true,
+  "letter": "w",
+  "auto": true
+ },
+ "GREY": {
+  "file": "greyhound/cordelia.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "OES": {
+  "file": "sheepdog-english/n02105641_12297.jpg",
+  "flip": true,
+  "letter": "o",
+  "auto": true
+ },
+ "AUCD": {
+  "file": "cattledog-australian/img_3668.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BERD": {
+  "file": "wikimedia/BERD/Bearded_Collie_600.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "KELP": {
+  "file": "kelpie/n02105412_3075.jpg",
+  "flip": true,
+  "letter": "K",
+  "auto": true
+ },
+ "BORD": {
+  "file": "collie-border/n02106166_615.jpg",
+  "flip": true,
+  "letter": "U",
+  "auto": true
+ },
+ "PEMB": {
+  "file": "pembroke/n02113023_4269.jpg",
+  "flip": true,
+  "letter": "v",
+  "auto": true
+ },
+ "CARD": {
+  "file": "corgi-cardigan/n02113186_9579.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "AUSS": {
+  "file": "australian-shepherd/leroy.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "COLL": {
+  "file": "rough-collie/1dog-rough-collie-portrait.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "SSHP": {
+  "file": "sheepdog-shetland/n02105855_12087.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "DOBP": {
+  "file": "doberman/n02107142_8399.jpg",
+  "flip": false,
+  "letter": "d",
+  "auto": true
+ },
+ "GSNZ": {
+  "file": "schnauzer-giant/n02097130_3628.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BRTR": {
+  "file": "wikimedia/BRTR/Wystawa_Rybnik_02_10_2011_czarny_terier_rosyjski_2pl.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "ROTT": {
+  "file": "rottweiler/n02106550_9432.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "GSMD": {
+  "file": "mountain-swiss/n02107574_2650.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BMD": {
+  "file": "mountain-bernese/n02107683_1244.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "LEON": {
+  "file": "leonberg/n02111129_2617.jpg",
+  "flip": false,
+  "letter": "L",
+  "auto": true
+ },
+ "STBD": {
+  "file": "stbernard/n02109525_10297.jpg",
+  "flip": false,
+  "letter": "z",
+  "auto": true
+ },
+ "RHOD": {
+  "file": "ridgeback-rhodesian/n02087394_2319.jpg",
+  "flip": true,
+  "letter": "R",
+  "auto": true
+ },
+ "DANE": {
+  "file": "dane-great/n02109047_12569.jpg",
+  "flip": true,
+  "letter": "G",
+  "auto": true
+ },
+ "CANE": {
+  "file": "wikimedia/CANE/Cane_corso_temi_1_1024x768x24__cropped.png",
+  "flip": false,
+  "auto": false
+ },
+ "NEAP": {
+  "file": "wikimedia/NEAP/5_Year_old_male_in_Napoli_Stance__2.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BOER": {
+  "file": "wikimedia/BOER/Boerboelmusta3.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "several dogs"
+ },
+ "BULM": {
+  "file": "mastiff-bull/n02108422_1975.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "MAST": {
+  "file": "mastiff-english/3.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "AMST": {
+  "file": "terrier-american/n02093428_19652.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "STAF": {
+  "file": "bullterrier-staffordshire/n02093256_1275.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "MBLT": {
+  "file": "wikimedia/MBLT/Minibull_2_Moletai_May_2014.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "BULT": {
+  "file": "wikimedia/BULT/Bullterrier-3453301920.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "FBUL": {
+  "file": "bulldog-french/n02108915_2807.jpg",
+  "flip": true,
+  "letter": "F",
+  "auto": true
+ },
+ "BOST": {
+  "file": "bulldog-boston/n02096585_6855.jpg",
+  "flip": false,
+  "auto": false
+ },
+ "DDBX": {
+  "file": "wikimedia/DDBX/French_Mastiff_female_4.jpg",
+  "flip": true,
+  "auto": false,
+  "fallback": "person in the way"
+ },
+ "BULD": {
+  "file": "bulldog-english/jager-1.jpg",
+  "flip": true,
+  "auto": false
+ },
+ "BOX": {
+  "file": "boxer/n02108089_5977.jpg",
+  "flip": true,
+  "letter": "b",
+  "auto": true
+ }
+}

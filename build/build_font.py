@@ -1,11 +1,17 @@
 """Trace the chosen dog silhouettes and build the LilPuppies font.
 
-Reads build/glyphs.json (one photo per character, picked from the contact sheets) and the
-masks in .cache/masks/, and writes to LilPuppies/:
+Reads build/glyphs.json (the letters A-Z and a-z, picked from the contact sheets),
+build/breed_glyphs.json (one photo per breed in breeds.json, from pick.py) and the masks in
+.cache/masks/, and writes to LilPuppies/:
     lilpuppies.ttf, lilpuppies.woff, lilpuppies.woff2   the font
-    lilpuppies.css                                @font-face with the font embedded, plus .lilpuppies
-    lilpuppies.json                               each character's breed and source photo
-    lilpuppies_all.png                            every glyph with its character
+    lilpuppies.css                    @font-face with the font embedded, plus .lilpuppies and .lilpuppies-codes
+    lilpuppies.json                   each letter's breed and source photo
+    lilpuppies_breeds.json            each breed's code, character, and source photo with its license
+    lilpuppies_all.png                every letter's dog
+    lilpuppies_breeds.png             every breed's dog, labelled with its code
+Every breed has a character in the Private Use Area (from U+E000, in breeds.json order) and a
+discretionary ligature: with font-variant-ligatures: discretionary-ligatures, typing its code
+(HUSK, BSJI, ...) draws the dog. A breed that also has a letter shares that letter's glyph.
 Usage (from LilPuppies/): python -I build/build_font.py
 """
 import base64
@@ -25,6 +31,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from breeds import NAMES  # noqa: E402
+from catalog import load as load_breeds  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -124,8 +131,18 @@ def draw(contours, pen):
         pen.closePath()
 
 
+def dog_glyph(mask_path, flip):
+    m = clean(np.array(Image.open(os.path.join(CACHE, mask_path)).convert("L")))
+    if flip:
+        m = m[:, ::-1]
+    pen = TTGlyphPen(None)
+    draw(trace(fit(m)), Cu2QuPen(pen, max_err=1.0, reverse_direction=False))
+    return pen.glyph()
+
+
 def main():
     spec = json.load(open(os.path.join(HERE, "glyphs.json"), encoding="utf8"))
+    picks = json.load(open(os.path.join(HERE, "breed_glyphs.json"), encoding="utf8"))
     segs = json.load(open(os.path.join(CACHE, "segments.json")))
     by_name = {r["file"].rsplit("/", 1)[1]: r for r in segs.values() if r["ok"]}
 
@@ -146,15 +163,46 @@ def main():
 
     for ch, g in spec.items():
         r = by_name[g["photo"]]
-        m = clean(np.array(Image.open(os.path.join(CACHE, r["mask"])).convert("L")))
-        if g.get("flip"):
-            m = m[:, ::-1]
-        bitmap = fit(m)
-        pen = TTGlyphPen(None)
-        draw(trace(bitmap), Cu2QuPen(pen, max_err=1.0, reverse_direction=False))
-        glyphs[ch] = pen.glyph()
+        glyphs[ch] = dog_glyph(r["mask"], g.get("flip"))
         cmap[ord(ch)] = ch
         key[ch] = {"breed": NAMES[r["breed"]], "dogCeoBreed": r["breed"], "photo": r["url"]}
+
+    # Every breed in breeds.json: a Private Use Area character and a ligature from its code.
+    breeds = load_breeds()
+    glyph_of, breed_key, ligs = {}, {}, []
+    for b in breeds:
+        p = picks.get(b["code"])
+        if b["alias"] or not p:
+            continue
+        if p.get("letter"):
+            glyph_of[b["code"]] = p["letter"]
+            continue
+        name = f"dog.{b['code']}"
+        glyph_of[b["code"]] = name
+        order.append(name)
+        glyphs[name] = dog_glyph(segs[p["file"]]["mask"], p.get("flip"))
+    for b in breeds:
+        g = glyph_of.get(b["alias"] or b["code"])
+        if not g:
+            print(f"no glyph for {b['code']} {b['name']}")
+            continue
+        cmap[ord(b["char"])] = g
+        ligs.append(f"  sub {' '.join(b['code'])} by {g};")
+        p = picks[b["alias"] or b["code"]]
+        twin = next(x for x in breeds if x["code"] == (b["alias"] or b["code"]))
+        cand = next((c for c in twin["candidates"] if c["file"] == p["file"]), None) \
+            or {"url": segs[p["file"]]["url"], "source": "Dog CEO"}  # a letter's photo outside the sample
+        entry = {"name": b["fullName"], "clade": b["clade"], "char": b["char"], "codepoint": f"U+{ord(b['char']):04X}"}
+        if p.get("letter"):
+            entry["letter"] = p["letter"]
+        if b["alias"]:
+            entry["sameDogAs"] = b["alias"]
+        entry["photo"] = cand["url"]
+        entry["source"] = cand["source"]
+        for k in ("page", "author", "license", "licenseUrl"):
+            if cand.get(k):
+                entry[k] = cand[k]
+        breed_key[b["code"]] = entry
 
     fb = FontBuilder(UPM, isTTF=True)
     fb.setupGlyphOrder(order)
@@ -175,16 +223,20 @@ def main():
         "fullName": "LilPuppies Regular",
         "psName": "LilPuppies-Regular",
         "version": f"Version {VERSION}",
-        "description": "Dog silhouettes for unit charts, one breed per letter. Inspired by ProPublica's WeePeople; "
-                       "traced from Dog CEO API photos (Stanford Dogs Dataset).",
+        "description": "Dog silhouettes for unit charts, one breed per letter, plus every breed by its code "
+                       "(discretionary ligatures). Inspired by ProPublica's WeePeople; traced from Dog CEO API photos "
+                       "(Stanford Dogs Dataset) and Wikimedia Commons photos.",
         "licenseDescription": "For non-commercial use. The silhouettes are traced from Stanford Dogs Dataset photos "
-                              "(via the Dog CEO API), which are licensed for non-commercial research and education.",
+                              "(via the Dog CEO API), licensed for non-commercial research and education, and from "
+                              "Wikimedia Commons photos credited in lilpuppies_breeds.json.",
     })
     fb.setupOS2(sTypoAscender=ASCENT, sTypoDescender=DESCENT, sTypoLineGap=0, usWinAscent=ASCENT, usWinDescent=-DESCENT,
                 sxHeight=XH, sCapHeight=CAP, achVendID="NONE", fsType=0)
     fb.setupPost()
     stamp = timestampNow()
     fb.setupHead(unitsPerEm=UPM, created=stamp, modified=stamp)
+    fb.addOpenTypeFeatures("languagesystem DFLT dflt;\nlanguagesystem latn dflt;\n\nfeature dlig {\n"
+                           + "\n".join(ligs) + "\n} dlig;\n")
 
     ttf = os.path.join(ROOT, "lilpuppies.ttf")
     fb.save(ttf)
@@ -200,10 +252,15 @@ def main():
             "@font-face {\n  font-family: 'LilPuppies';\n  font-weight: normal;\n  font-style: normal;\n"
             f"  src: url(data:font/woff2;base64,{b64['woff2']}) format('woff2'),\n"
             f"       url(data:font/woff;base64,{b64['woff']}) format('woff');\n}}\n\n"
-            ".lilpuppies {\n  font-family: 'LilPuppies';\n}\n"
+            ".lilpuppies {\n  font-family: 'LilPuppies';\n}\n\n"
+            "/* Type breed codes (HUSK, BSJI, ...) to draw each breed; see lilpuppies_breeds.json. */\n"
+            ".lilpuppies-codes {\n  font-family: 'LilPuppies';\n"
+            "  font-variant-ligatures: discretionary-ligatures;\n}\n"
         )
     with open(os.path.join(ROOT, "lilpuppies.json"), "w", encoding="utf8") as fh:
         json.dump(key, fh, indent=1, ensure_ascii=False)
+    with open(os.path.join(ROOT, "lilpuppies_breeds.json"), "w", encoding="utf8") as fh:
+        json.dump(breed_key, fh, indent=1, ensure_ascii=False)
 
     # Preview sheet: every glyph with its character.
     cols, cell = 13, 110
@@ -218,7 +275,19 @@ def main():
         d.text((x + cell / 2, y + 88), ch, font=font, fill="black", anchor="ms")
         d.text((x + cell / 2, y + cell + 6), ch, font=label, fill=(120, 120, 120), anchor="mm")
     img.save(os.path.join(ROOT, "lilpuppies_all.png"))
-    print(f"built {len(spec)} glyphs:", " ".join(chars))
+    print(f"built {len(spec)} letters:", " ".join(chars))
+
+    # Preview sheet: every breed with its code.
+    codes = list(breed_key)
+    rows = (len(codes) + cols - 1) // cols
+    img = Image.new("RGB", (cols * cell, rows * (cell + 20)), "white")
+    d = ImageDraw.Draw(img)
+    for i, code in enumerate(codes):
+        x, y = (i % cols) * cell, (i // cols) * (cell + 20)
+        d.text((x + cell / 2, y + 88), breed_key[code]["char"], font=font, fill="black", anchor="ms")
+        d.text((x + cell / 2, y + cell + 6), code, font=label, fill=(120, 120, 120), anchor="mm")
+    img.save(os.path.join(ROOT, "lilpuppies_breeds.png"))
+    print(f"built {len(breed_key)} breeds ({len(order) - 2 - len(spec)} new glyphs)")
 
 
 if __name__ == "__main__":

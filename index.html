@@ -25,6 +25,9 @@
   .grid .g { font-size: 64px; line-height: 1; height: 60px; }
   .grid b { font: 600 13px ui-monospace, SFMono-Regular, Consolas, monospace; margin-top: 6px; }
   .grid small { color: var(--ink-2); font-size: 11.5px; line-height: 1.3; }
+  h3 .count { color: var(--ink-2); font-weight: 400; font-variant-numeric: tabular-nums; margin-left: .2em; }
+  main > h3 { font-size: 1rem; margin: 1.8em 0 .6em; }
+  .sub { font-size: 14.5px; margin: 1.2em 0 .5em; }
   .try { width: 100%; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--ink); }
   .tryout { font-size: 48px; line-height: 1.1; min-height: 1.2em; overflow-wrap: anywhere; margin-top: 10px; }
   .credit { font-size: 14px; color: var(--ink-2); margin-top: -0.4em; }
@@ -80,6 +83,10 @@
   <h2>Try it</h2>
   <input class="try" id="try" value="Woof" aria-label="Type letters to see their dogs">
   <div class="tryout lilpuppies" id="out" aria-hidden="true">Woof</div>
+  <p class="sub">Or type breed codes, such as <code>HUSK</code> for a Siberian Husky. Every code is listed under
+    <a href="#every-breed">Every breed</a>.</p>
+  <input class="try" id="try2" value="HUSK BSJI AKIT DACH" aria-label="Type breed codes to see their dogs">
+  <div class="tryout lilpuppies-codes" id="out2" aria-hidden="true">HUSK BSJI AKIT DACH</div>
 
   <h2>Uppercase</h2>
   <ul class="grid">
@@ -140,12 +147,265 @@
       <li><span class="lilpuppies g" aria-hidden="true">z</span><b>z</b><small>St. Bernard</small></li>
   </ul>
 
+  <h2 id="every-breed">Every breed</h2>
+  <p>Beyond the 52 letters, the font has all 165 breeds of the genetics study in <code>breeds.json</code>,
+    grouped here by clade. Each one has a code, which draws the dog in the <code>lilpuppies-codes</code> class, and
+    its own character in Unicode&rsquo;s Private Use Area, listed in <code>lilpuppies_breeds.json</code>. A breed that
+    also has a letter draws the same dog.</p>
+  <h3>Wild <span class="count">1</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WOLF</b><small>Grey Wolf</small></li>
+  </ul>
+  <h3>Basenji <span class="count">1</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BSJI</b><small>Basenji</small></li>
+  </ul>
+  <h3>Asian Spitz <span class="count">10</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>XIGO</b><small>Xigou</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CHTM</b><small>Tibetan Mastiff - COO</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TIBM</b><small>Tibetan Mastiff - USA</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>HUSK</b><small>Siberian Husky</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GREE</b><small>Greenland Sledge Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AMAL</b><small>Alaskan Malamute</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SHIB</b><small>Shiba Inu</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AKIT</b><small>Akita</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SHAR</b><small>Chinese Shar-Pei</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CHOW</b><small>Chow Chow</small></li>
+  </ul>
+  <h3>Asian Toy <span class="count">5</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CHIN</b><small>Japanese Chin</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TIBS</b><small>Tibetan Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PEKE</b><small>Pekingese</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>LHSA</b><small>Lhasa Apso</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SHIH</b><small>Shih Tzu</small></li>
+  </ul>
+  <h3>Nordic Spitz <span class="count">4</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NELK</b><small>Norwegian Elkhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SVAL</b><small>Swedish Vallhund</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ICES</b><small>Icelandic Sheepdog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>KEES</b><small>Keeshond</small></li>
+  </ul>
+  <h3>Schnauzer <span class="count">2</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SSNZ</b><small>Standard Schnauzer</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MSNZ</b><small>Miniature Schnauzer</small></li>
+  </ul>
+  <h3>Small Spitz <span class="count">3</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AESK</b><small>American Eskimo Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>VPIN</b><small>Volpino</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>POM</b><small>Pomeranian</small></li>
+  </ul>
+  <h3>Toy Spitz <span class="count">4</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SKIP</b><small>Schipperke</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PAPI</b><small>Papillon</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BRUS</b><small>Brussels Griffon</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PUG</b><small>PugDog</small></li>
+  </ul>
+  <h3>Hungarian <span class="count">1</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PUMI</b><small>Pumi</small></li>
+  </ul>
+  <h3>Poodle <span class="count">8</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>COTO</b><small>Coton de Tulear</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PTWD</b><small>Portuguese Water Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SPOO</b><small>Standard Poodle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TPOO</b><small>Toy Poodle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MPOO</b><small>Miniature Poodle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BICH</b><small>Bichon Frise</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>HAVA</b><small>Havanese</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MALT</b><small>Maltese</small></li>
+  </ul>
+  <h3>American Terrier <span class="count">3</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>RATT</b><small>Rat Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TYFX</b><small>Toy Fox Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AHRT</b><small>American Hairless Terrier</small></li>
+  </ul>
+  <h3>American Toy <span class="count">2</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CRES</b><small>Chinese Crested</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CHIH</b><small>Chihuahua</small></li>
+  </ul>
+  <h3>Pinscher <span class="count">2</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MNTY</b><small>Toy Manchester Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MPIN</b><small>Miniature Pinscher</small></li>
+  </ul>
+  <h3>Terrier <span class="count">18</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AIRT</b><small>Airedale Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>KERY</b><small>Kerry Blue Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GLEN</b><small>Glen of Imaal Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SCWT</b><small>Soft Coated Wheaten Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>IRIT</b><small>Irish Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BEDT</b><small>Bedlington Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BORT</b><small>Border Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PARS</b><small>Parson Russell Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>JACK</b><small>Jack Russell terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WFOX</b><small>Wire Fox Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AUST</b><small>Australian Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SILK</b><small>Silky Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>YORK</b><small>Yorkshire Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NOWT</b><small>Norwich Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NORF</b><small>Norfolk Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SCOT</b><small>Scottish Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CAIR</b><small>Cairn Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WHWT</b><small>West Highland White Terrier</small></li>
+  </ul>
+  <h3>New World <span class="count">7</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MXOL</b><small>Miniature Xoloitzcuintli</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>XOLO</b><small>Xoloitzcuintli</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>INCA</b><small>Peruvian Hairless Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>COOK</b><small>Chinook</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BPIC</b><small>Berger Picard</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CPAT</b><small>Cane Paratore</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GSD</b><small>German Shepherd Dog</small></li>
+  </ul>
+  <h3>Mediterranean <span class="count">12</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GPYR</b><small>Great Pyrenees</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PHAR</b><small>Pharaoh Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CIRN</b><small>Cirneco dell&#x27;Etna</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>IBIZ</b><small>Ibizan Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>KOMO</b><small>Komondor</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>KUVZ</b><small>Kuvasz</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SLOU</b><small>Sloughi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AZWK</b><small>Azawakh</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ANAT</b><small>Anatolian Shepherd</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AFGH</b><small>Afghan Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>COOS</b><small>Saluki - COO</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SALU</b><small>Saluki - USA</small></li>
+  </ul>
+  <h3>Scent Hound <span class="count">8</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DACH</b><small>Dachshund</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PBGV</b><small>Petit Basset Griffon Vendeen</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BASS</b><small>Basset Hound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>REDB</b><small>Redbone Coonhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BEAG</b><small>Beagle</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>FOXH</b><small>Foxhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>OTTR</b><small>Otterhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BLDH</b><small>Bloodhound</small></li>
+  </ul>
+  <h3>Spaniel <span class="count">5</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ESSP</b><small>English Springer Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CKCS</b><small>Cavalier King Charles Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ACKR</b><small>American Cocker Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>FIEL</b><small>Field Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ECKR</b><small>English Cocker Spaniel</small></li>
+  </ul>
+  <h3>Retriever <span class="count">7</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NSDT</b><small>Nova Scotia Duck Tolling Retriever</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CCRT</b><small>Curly-coated Retriever</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>IWSP</b><small>Irish Water Spaniel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NEWF</b><small>Newfoundland</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>LAB</b><small>Labrador Retriever</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GOLD</b><small>Golden Retriever</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>FCR</b><small>Flat-coated Retriever</small></li>
+  </ul>
+  <h3>Pointer Setter <span class="count">12</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DALM</b><small>Dalmatian</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WEIM</b><small>Weimaraner</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>LMUN</b><small>Large Munsterlander</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>VIZS</b><small>Vizsla</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WHPG</b><small>Wirehaired Pointing Griffon</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GWHP</b><small>German Wirehaired Pointer</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GSHP</b><small>German Shorthaired Pointer</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SPIN</b><small>Spinone Italiano</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BRIT</b><small>Brittany</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ISET</b><small>Irish Setter</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ESET</b><small>English Setter</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GORD</b><small>Gordon Setter</small></li>
+  </ul>
+  <h3>Continental Herder <span class="count">5</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BRIA</b><small>Briard</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BOUV</b><small>Bouvier des Flandres</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BMAL</b><small>Belgian Malinois</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TURV</b><small>Belgian Tervuren</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BELS</b><small>Belgian Sheepdog</small></li>
+  </ul>
+  <h3>UKRural <span class="count">16</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ITGY</b><small>Italian Greyhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BORZ</b><small>Borzoi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>IWOF</b><small>Irish Wolfhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DEER</b><small>Scottish Deerhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>WHIP</b><small>Whippet</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GREY</b><small>Greyhound</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>OES</b><small>Old English Sheepdog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AUCD</b><small>Australian Cattle Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BERD</b><small>Bearded Collie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>KELP</b><small>Kelpie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BORD</b><small>Border Collie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>PEMB</b><small>Pembroke Welsh Corgi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CARD</b><small>Cardigan Welsh Corgi</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AUSS</b><small>Australian Shepherd</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>COLL</b><small>Collie</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SSHP</b><small>Shetland Sheepdog</small></li>
+  </ul>
+  <h3>Drover <span class="count">4</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DOBP</b><small>Doberman Pinscher</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GSNZ</b><small>Giant Schnauzer</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BRTR</b><small>Black Russian Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ROTT</b><small>Rottweiler</small></li>
+  </ul>
+  <h3>Alpine <span class="count">4</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>GSMD</b><small>Greater Swiss Mountain Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BMD</b><small>Bernese Mountain Dog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>LEON</b><small>Leonberger</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>STBD</b><small>Saint Bernard</small></li>
+  </ul>
+  <h3>European Mastiff <span class="count">17</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>RHOD</b><small>Rhodesian Ridgeback</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DANE</b><small>Great Dane</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>ITCC</b><small>Cane Corso - COO</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>CANE</b><small>Cane Corso - USA</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>NEAP</b><small>Neapolitan Mastiff</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BOER</b><small>Boerboel</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BULM</b><small>Bullmastiff</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MAST</b><small>English Mastiff</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>AMST</b><small>American Staffordshire Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>STAF</b><small>Staffordshire Bull Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>MBLT</b><small>Miniature Bull Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BULT</b><small>Bull Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>FBUL</b><small>French Bulldog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BOST</b><small>Boston Terrier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>DDBX</b><small>Dogue de Bordeaux</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BULD</b><small>Bulldog</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>BOX</b><small>Boxer</small></li>
+  </ul>
+  <h3>No clade assigned <span class="count">4</span></h3>
+  <ul class="grid">
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>EURA</b><small>Eurasier</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>SAMO</b><small>Samoyed</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>FINS</b><small>Finish Spitz</small></li>
+      <li><span class="lilpuppies g" aria-hidden="true"></span><b>TIBT</b><small>Tibetan Terrier</small></li>
+  </ul>
+
   <h2>Use it</h2>
   <pre>&lt;link rel="stylesheet" href="lilpuppies.css"&gt;
-&lt;span class="lilpuppies"&gt;BbDdGg&lt;/span&gt;</pre>
+&lt;span class="lilpuppies"&gt;BbDdGg&lt;/span&gt;
+&lt;span class="lilpuppies-codes"&gt;HUSK BSJI AKIT&lt;/span&gt;</pre>
   <p>The CSS embeds the font, so it is the only file you need. Or load <code>lilpuppies.woff2</code> /
     <code>lilpuppies.woff</code> / <code>lilpuppies.ttf</code> with your own <code>@font-face</code>. Space is a gap the width of a
-    dog. Only A&ndash;Z and a&ndash;z have dogs, the same characters as WeePeople.</p>
+    dog. In the <code>lilpuppies</code> class, A&ndash;Z and a&ndash;z are the dogs, the same characters as WeePeople.
+    The <code>lilpuppies-codes</code> class turns on discretionary ligatures
+    (<code>font-variant-ligatures: discretionary-ligatures</code>), so breed codes become dogs. In code you can also
+    write a breed&rsquo;s character directly, such as <code>"\uE005"</code> for the Siberian Husky.</p>
 
   <section class="viz" aria-labelledby="viz-h">
   <h2 id="viz-h">Example charts</h2>
@@ -243,8 +503,10 @@
 
   <footer>
     Silhouettes traced from photos in the Stanford Dogs Dataset (Khosla et al. 2011, from ImageNet), served by the
-    Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too. The
-    source photo for every letter is listed in <code>lilpuppies.json</code> and README.md. LilPuppies is not affiliated with
+    Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too.
+    Breeds that Dog CEO lacks are traced from Wikimedia Commons photos, credited with their authors and licenses in
+    README.md and <code>lilpuppies_breeds.json</code>. The source photo for every letter is listed in
+    <code>lilpuppies.json</code> and README.md. LilPuppies is not affiliated with
     ProPublica and uses none of WeePeople&rsquo;s shapes. Inspired by
     <a href="https://github.com/propublica/weepeople">WeePeople</a>.
   </footer>
@@ -363,6 +625,8 @@ const BREEDS = [{"c":"A","breed":"Afghan Hound","group":"Hound","kg":25,"yrs":13
 <script>
   const t = document.getElementById("try"), o = document.getElementById("out");
   t.addEventListener("input", () => { o.textContent = t.value; });
+  const t2 = document.getElementById("try2"), o2 = document.getElementById("out2");
+  t2.addEventListener("input", () => { o2.textContent = t2.value.toUpperCase(); });
 </script>
 </body>
 </html>

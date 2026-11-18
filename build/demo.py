@@ -1,4 +1,5 @@
-"""Write the demo page (index.html) and the key table in README.md from lilpuppies.json.
+"""Write the demo page (index.html) and the key tables in README.md from lilpuppies.json and
+lilpuppies_breeds.json.
 
 Usage (from LilPuppies/): python -I build/demo.py
 """
@@ -9,6 +10,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 key = json.load(open(os.path.join(ROOT, "lilpuppies.json"), encoding="utf8"))
+bkey = json.load(open(os.path.join(ROOT, "lilpuppies_breeds.json"), encoding="utf8"))
 upper = [c for c in key if c.isupper()]
 lower = [c for c in key if c.islower()]
 e = html.escape
@@ -19,6 +21,29 @@ def cells(chars):
         f'      <li><span class="lilpuppies g" aria-hidden="true">{c}</span><b>{c}</b><small>{e(key[c]["breed"])}</small></li>'
         for c in chars
     )
+
+
+def clade_name(c):
+    """"AsianSpitz" -> "Asian Spitz", "UKRural" -> "UK Rural"; breeds without a clade go last."""
+    return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", c) if c else "No clade assigned"
+
+
+# Every breed, grouped by clade in breeds.json order.
+clades = {}
+for code, b in bkey.items():
+    clades.setdefault(b["clade"], []).append(code)
+clade_order = [c for c in clades if c] + ([None] if None in clades else [])
+breed_sections = "\n".join(
+    f'  <h3>{e(clade_name(c))} <span class="count">{len(clades[c])}</span></h3>\n  <ul class="grid">\n'
+    + "\n".join(
+        f'      <li><span class="lilpuppies g" aria-hidden="true">{bkey[code]["char"]}</span><b>{code}</b>'
+        f'<small>{e(bkey[code]["name"])}</small></li>'
+        for code in clades[c]
+    )
+    + "\n  </ul>"
+    for c in clade_order
+)
+husky_cp = bkey["HUSK"]["codepoint"][2:]
 
 
 # A sample unit chart: 100 dogs, a quarter of them highlighted.
@@ -94,6 +119,9 @@ page = f"""<!doctype html>
   .grid .g {{ font-size: 64px; line-height: 1; height: 60px; }}
   .grid b {{ font: 600 13px ui-monospace, SFMono-Regular, Consolas, monospace; margin-top: 6px; }}
   .grid small {{ color: var(--ink-2); font-size: 11.5px; line-height: 1.3; }}
+  h3 .count {{ color: var(--ink-2); font-weight: 400; font-variant-numeric: tabular-nums; margin-left: .2em; }}
+  main > h3 {{ font-size: 1rem; margin: 1.8em 0 .6em; }}
+  .sub {{ font-size: 14.5px; margin: 1.2em 0 .5em; }}
   .try {{ width: 100%; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--ink); }}
   .tryout {{ font-size: 48px; line-height: 1.1; min-height: 1.2em; overflow-wrap: anywhere; margin-top: 10px; }}
   .credit {{ font-size: 14px; color: var(--ink-2); margin-top: -0.4em; }}
@@ -149,6 +177,10 @@ page = f"""<!doctype html>
   <h2>Try it</h2>
   <input class="try" id="try" value="Woof" aria-label="Type letters to see their dogs">
   <div class="tryout lilpuppies" id="out" aria-hidden="true">Woof</div>
+  <p class="sub">Or type breed codes, such as <code>HUSK</code> for a Siberian Husky. Every code is listed under
+    <a href="#every-breed">Every breed</a>.</p>
+  <input class="try" id="try2" value="HUSK BSJI AKIT DACH" aria-label="Type breed codes to see their dogs">
+  <div class="tryout lilpuppies-codes" id="out2" aria-hidden="true">HUSK BSJI AKIT DACH</div>
 
   <h2>Uppercase</h2>
   <ul class="grid">
@@ -159,12 +191,23 @@ page = f"""<!doctype html>
 {cells(lower)}
   </ul>
 
+  <h2 id="every-breed">Every breed</h2>
+  <p>Beyond the 52 letters, the font has all {len(bkey)} breeds of the genetics study in <code>breeds.json</code>,
+    grouped here by clade. Each one has a code, which draws the dog in the <code>lilpuppies-codes</code> class, and
+    its own character in Unicode&rsquo;s Private Use Area, listed in <code>lilpuppies_breeds.json</code>. A breed that
+    also has a letter draws the same dog.</p>
+{breed_sections}
+
   <h2>Use it</h2>
   <pre>&lt;link rel="stylesheet" href="lilpuppies.css"&gt;
-&lt;span class="lilpuppies"&gt;BbDdGg&lt;/span&gt;</pre>
+&lt;span class="lilpuppies"&gt;BbDdGg&lt;/span&gt;
+&lt;span class="lilpuppies-codes"&gt;HUSK BSJI AKIT&lt;/span&gt;</pre>
   <p>The CSS embeds the font, so it is the only file you need. Or load <code>lilpuppies.woff2</code> /
     <code>lilpuppies.woff</code> / <code>lilpuppies.ttf</code> with your own <code>@font-face</code>. Space is a gap the width of a
-    dog. Only A&ndash;Z and a&ndash;z have dogs, the same characters as WeePeople.</p>
+    dog. In the <code>lilpuppies</code> class, A&ndash;Z and a&ndash;z are the dogs, the same characters as WeePeople.
+    The <code>lilpuppies-codes</code> class turns on discretionary ligatures
+    (<code>font-variant-ligatures: discretionary-ligatures</code>), so breed codes become dogs. In code you can also
+    write a breed&rsquo;s character directly, such as <code>"\\u{husky_cp}"</code> for the Siberian Husky.</p>
 
   <section class="viz" aria-labelledby="viz-h">
   <h2 id="viz-h">Example charts</h2>
@@ -205,8 +248,10 @@ page = f"""<!doctype html>
 
   <footer>
     Silhouettes traced from photos in the Stanford Dogs Dataset (Khosla et al. 2011, from ImageNet), served by the
-    Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too. The
-    source photo for every letter is listed in <code>lilpuppies.json</code> and README.md. LilPuppies is not affiliated with
+    Dog CEO API; licensed for non-commercial research and education, so LilPuppies is for non-commercial use too.
+    Breeds that Dog CEO lacks are traced from Wikimedia Commons photos, credited with their authors and licenses in
+    README.md and <code>lilpuppies_breeds.json</code>. The source photo for every letter is listed in
+    <code>lilpuppies.json</code> and README.md. LilPuppies is not affiliated with
     ProPublica and uses none of WeePeople&rsquo;s shapes. Inspired by
     <a href="https://github.com/propublica/weepeople">WeePeople</a>.
   </footer>
@@ -218,6 +263,8 @@ const BREEDS = {breeds_json};
 <script>
   const t = document.getElementById("try"), o = document.getElementById("out");
   t.addEventListener("input", () => {{ o.textContent = t.value; }});
+  const t2 = document.getElementById("try2"), o2 = document.getElementById("out2");
+  t2.addEventListener("input", () => {{ o2.textContent = t2.value.toUpperCase(); }});
 </script>
 </body>
 </html>
@@ -230,10 +277,28 @@ rows = ["| Letter | Breed | Source photo |", "|---|---|---|"]
 for c in upper + lower:
     u = key[c]["photo"]
     rows.append(f"| `{c}` | {key[c]['breed']} | [{u.rsplit('/', 1)[1]}]({u}) |")
+
+# README breed table, between the BREEDS markers: every breed, with credit for Wikimedia photos.
+brows = ["| Code | Character | Breed | Clade | Source photo |", "|---|---|---|---|---|"]
+for code, b in bkey.items():
+    if b.get("sameDogAs"):
+        src = f"same dog as `{b['sameDogAs']}`"
+    elif b.get("letter"):
+        src = f"same dog as letter `{b['letter']}`"
+    elif b["source"] == "Wikimedia Commons":
+        lic = f"[{b['license']}]({b['licenseUrl']})" if b.get("licenseUrl") else (b.get("license") or "see page")
+        src = f"[Wikimedia Commons]({b['page']}), {b.get('author') or 'unknown author'}, {lic}"
+    else:
+        src = f"[{b['photo'].rsplit('/', 1)[1]}]({b['photo']})"
+    src = src.replace("|", "\\|").replace("\n", " ")
+    brows.append(f"| `{code}` | {b['codepoint']} | {b['name']} | {clade_name(b['clade']) if b['clade'] else ''} | {src} |")
+
 readme_path = os.path.join(ROOT, "README.md")
 readme = open(readme_path, encoding="utf8").read()
 # Between the markers, whether empty or filled by an earlier run.
-readme = re.sub(r"<!-- KEY -->.*?<!-- /KEY -->", lambda m: "<!-- KEY -->\n" + "\n".join(rows) + "\n<!-- /KEY -->", readme, flags=re.S)
+for tag, lines in (("KEY", rows), ("BREEDS", brows)):
+    readme = re.sub(rf"<!-- {tag} -->.*?<!-- /{tag} -->", lambda m, t=tag, ls=lines: f"<!-- {t} -->\n" + "\n".join(ls) + f"\n<!-- /{t} -->",
+                    readme, flags=re.S)
 with open(readme_path, "w", encoding="utf8") as fh:
     fh.write(readme)
-print("wrote index.html and README key:", len(rows) - 2, "rows")
+print("wrote index.html and README keys:", len(rows) - 2, "letters,", len(brows) - 2, "breeds")
